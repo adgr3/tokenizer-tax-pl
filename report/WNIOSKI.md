@@ -14,6 +14,18 @@ w innych językach, dlatego ranking dla polskiego najsłabiej zgadza się z rank
 a Claude Haiku 5.5 najdrożej (3,46), czyli ten sam polski tekst to u Claude'a prawie dwa razy więcej tokenów; po
 uwzględnieniu ceny najtańszy na 1000 polskich słów jest Doubao Seed 2.0 Mini (0,000068 USD).
 
+### Grok 4.7 a Grok 4.1 Fast
+
+*Dodatkowy test na prośbę autora; wyjątek od limitu ceny 0,20 USD/1 mln tokenów (Grok 4.7 kosztuje 2,00 USD).
+Grok 4.7 mierzony na 1 bloku na język (angielski i hiszpański na 5), więc dokładność jest mniejsza niż dla 4.1 Fast.*
+
+Na tych samych blokach tekstu Grok 4.7 koduje angielski i hiszpański prawie tak samo jak Grok 4.1 Fast (różnica
+surowych liczb tokenów jest stała i wynika z innego szablonu czatu: 4 wobec 168 tokenów narzutu). W innych językach
+różnica się zmienia: po polsku Grok 4.7 zużywa ok. 10% więcej tokenów (2,07 wobec 1,88 na tym samym bloku), po czesku
+i bułgarsku wyraźnie mniej. To znaczy, że xAI zmieniło tokenizer między generacjami, a dla polskiego nowa wersja jest
+nieco mniej oszczędna. Razem z dziesięciokrotnie wyższą ceną 1000 polskich słów kosztuje w Grok 4.7 0,0041 USD,
+a w Grok 4.1 Fast 0,00037 USD.
+
 ### Modele przez API, których nie zmierzono
 
 - Gemini Pro (AIHubMix): „model cannot be served” — innego Gemini z ceną wejścia ≤ 0,20 USD/1 mln tokenów nie ma.

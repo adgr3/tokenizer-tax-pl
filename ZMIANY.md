@@ -87,3 +87,19 @@ Dopisane:
   podpisów z liniami do punktów (wcześniej podpisy nachodziły na siebie).
 - 08 (rodzaje tekstu): paleta `tab20` (13 serii; wcześniej kolory się powtarzały), SIB-200 na czarno, legenda nad
   słupkami.
+
+## Grok 4.7 — wyjątek od reguły budżetu (za zgodą użytkownika)
+
+- Użytkownik poprosił o porównanie z Grok 4.1 Fast i zgodził się na pomiar przez AIHubMix mimo ceny wejścia
+  2,00 USD/1 mln tokenów (reguła: ≤ 0,20). Szacunek przed pomiarem: 0,68 USD (5 bloków na język, jak inne modele).
+- Bez zmian w kodzie: limit ceny podniesiony tylko w tym uruchomieniu
+  (`python -c "import tt.measure_api as m; m.MAX_INPUT_USD_PER_M=2.0; …"`), bezpiecznik
+  `AIHUBMIX_MAX_SPEND_USD=2.00` tylko dla tego uruchomienia.
+- Zapytania trwają ok. 30–50 s; pojedyncze przekroczenia czasu (180 s) skrypt pomija, a pomiar jest wznawiany
+  do skutku (wznawianie pomija już zapisane bloki).
+- AIHubMix odpowiadał dla Grok 4.7 po 1–4 min, a co drugie zapytanie przekraczało 180 s (pełny pomiar ok. 6 h).
+  Po 9 zapisanych zapytaniach przełączono na 1 blok na język (jak dla OpenRouter), także tylko w tym uruchomieniu
+  (`k_aihubmix=1` podmienione w pamięci; `results/subsample.json` bez zmian). Angielski ma 5 bloków, hiszpański 3.
+  Wydatek AIHubMix łącznie: 0,40 USD (Grok 4.7: ok. 0,10 USD).
+- Wynik: inny tokenizer niż Grok 4.1 Fast (porównanie surowych liczb tokenów na tych samych blokach) — opis
+  w `report/WNIOSKI.md`.

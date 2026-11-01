@@ -11,6 +11,7 @@ models:
   - {id: api_claude_haiku55, label: "Claude Haiku 5.5", provider: aihubmix, model: "claude-haiku-5-5", input_usd_per_m: 0.10, output_usd_per_m: 0.50, origin: USA}
   - {id: api_grok41_fast, label: "Grok 4.1 Fast", provider: aihubmix, model: "grok-4-1-fast-non-reasoning", input_usd_per_m: 0.20, output_usd_per_m: 0.50, origin: USA}
   - {id: api_gemini_pro, label: "Gemini Pro (1.0)", provider: aihubmix, model: "gemini-pro", input_usd_per_m: 0.20, output_usd_per_m: 0.60, origin: USA, note: "jedyny Gemini z ceną wejścia ≤ 0,20 USD/1M; nowsze Gemini (3.x Flash-Lite od 0,25) za drogie"}
+  - {id: api_grok47, label: "Grok 4.7", provider: aihubmix, model: "grok-4.7", input_usd_per_m: 2.00, output_usd_per_m: 6.00, origin: USA, note: "wyjątek od limitu ceny 0,20 USD/1M za zgodą użytkownika (porównanie z Grok 4.1 Fast)"}
   - {id: api_mercury25, label: "Mercury 2.5 (Inception)", provider: aihubmix, model: "mercury-2.5", input_usd_per_m: 0.20, output_usd_per_m: 0.75, origin: USA}
   - {id: api_doubao_seed2, label: "Doubao Seed 2.0 Mini", provider: aihubmix, model: "doubao-seed-2-0-mini-260428", input_usd_per_m: 0.030136, output_usd_per_m: 0.30136, origin: Chiny}
   - {id: api_ernie45_turbo, label: "ERNIE 4.5 Turbo", provider: aihubmix, model: "ernie-4.5-turbo-latest", input_usd_per_m: 0.11, output_usd_per_m: 0.44, origin: Chiny, note: "ernie-x1-turbo: brak dostępu (HTTP 401)"}

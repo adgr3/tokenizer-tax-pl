@@ -1,0 +1,420 @@
+{
+ "id": "api_grok47",
+ "label": "Grok 4.7",
+ "method": "api:aihubmix",
+ "kind": "api",
+ "repo_used": "grok-4.7",
+ "group": "api",
+ "origin": "USA",
+ "polish_model": false,
+ "bench_ref": false,
+ "calibration": null,
+ "vocab_size": null,
+ "fingerprint": null,
+ "overhead_tokens": 4,
+ "k_blocks": 1,
+ "input_usd_per_m": 2.0,
+ "note": "wyjątek od limitu ceny 0,20 USD/1M za zgodą użytkownika (porównanie z Grok 4.1 Fast)",
+ "measured_at": "2026-11-01T20:17:46+00:00",
+ "languages": {
+  "eng_Latn": {
+   "blocks": [
+    {
+     "block": 0,
+     "chars": 5927,
+     "bytes": 5929,
+     "words": 980,
+     "tokens": 1208
+    },
+    {
+     "block": 1,
+     "chars": 5880,
+     "bytes": 5880,
+     "words": 945,
+     "tokens": 1149
+    },
+    {
+     "block": 2,
+     "chars": 5954,
+     "bytes": 5956,
+     "words": 971,
+     "tokens": 1185
+    },
+    {
+     "block": 3,
+     "chars": 5980,
+     "bytes": 5989,
+     "words": 966,
+     "tokens": 1189
+    },
+    {
+     "block": 4,
+     "chars": 3057,
+     "bytes": 3059,
+     "words": 525,
+     "tokens": 616
+    }
+   ],
+   "fertility": 1.2146199241678193,
+   "se": 0.010788963341308218,
+   "n_blocks": 5
+  },
+  "spa_Latn": {
+   "blocks": [
+    {
+     "block": 0,
+     "chars": 5948,
+     "bytes": 6067,
+     "words": 990,
+     "tokens": 1335
+    },
+    {
+     "block": 1,
+     "chars": 5987,
+     "bytes": 6088,
+     "words": 964,
+     "tokens": 1312
+    },
+    {
+     "block": 2,
+     "chars": 5985,
+     "bytes": 6080,
+     "words": 963,
+     "tokens": 1340
+    },
+    {
+     "block": 3,
+     "chars": 5755,
+     "bytes": 5867,
+     "words": 937,
+     "tokens": 1285
+    }
+   ],
+   "fertility": 1.3680909302423803,
+   "se": 0.009096499587970158,
+   "n_blocks": 4
+  },
+  "fra_Latn": {
+   "blocks": [
+    {
+     "block": 3,
+     "chars": 5885,
+     "bytes": 6093,
+     "words": 955,
+     "tokens": 1375
+    }
+   ],
+   "fertility": 1.4397905759162304,
+   "se": null,
+   "n_blocks": 1
+  },
+  "por_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5894,
+     "bytes": 6057,
+     "words": 954,
+     "tokens": 1409
+    }
+   ],
+   "fertility": 1.4769392033542976,
+   "se": null,
+   "n_blocks": 1
+  },
+  "ita_Latn": {
+   "blocks": [
+    {
+     "block": 3,
+     "chars": 5809,
+     "bytes": 5848,
+     "words": 888,
+     "tokens": 1366
+    }
+   ],
+   "fertility": 1.5382882882882882,
+   "se": null,
+   "n_blocks": 1
+  },
+  "nld_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5867,
+     "bytes": 5880,
+     "words": 908,
+     "tokens": 1483
+    }
+   ],
+   "fertility": 1.6332599118942732,
+   "se": null,
+   "n_blocks": 1
+  },
+  "deu_Latn": {
+   "blocks": [
+    {
+     "block": 3,
+     "chars": 5906,
+     "bytes": 5989,
+     "words": 825,
+     "tokens": 1317
+    }
+   ],
+   "fertility": 1.5963636363636364,
+   "se": null,
+   "n_blocks": 1
+  },
+  "dan_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5932,
+     "bytes": 6034,
+     "words": 916,
+     "tokens": 1641
+    }
+   ],
+   "fertility": 1.7914847161572052,
+   "se": null,
+   "n_blocks": 1
+  },
+  "swe_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5868,
+     "bytes": 6099,
+     "words": 875,
+     "tokens": 1587
+    }
+   ],
+   "fertility": 1.8137142857142856,
+   "se": null,
+   "n_blocks": 1
+  },
+  "ron_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5999,
+     "bytes": 6302,
+     "words": 936,
+     "tokens": 1714
+    }
+   ],
+   "fertility": 1.8311965811965811,
+   "se": null,
+   "n_blocks": 1
+  },
+  "pol_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5871,
+     "bytes": 6223,
+     "words": 812,
+     "tokens": 1681
+    }
+   ],
+   "fertility": 2.0701970443349755,
+   "se": null,
+   "n_blocks": 1
+  },
+  "gle_Latn": {
+   "blocks": [
+    {
+     "block": 3,
+     "chars": 5848,
+     "bytes": 6245,
+     "words": 977,
+     "tokens": 2251
+    }
+   ],
+   "fertility": 2.3039918116683724,
+   "se": null,
+   "n_blocks": 1
+  },
+  "ces_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5977,
+     "bytes": 6637,
+     "words": 900,
+     "tokens": 1921
+    }
+   ],
+   "fertility": 2.1344444444444446,
+   "se": null,
+   "n_blocks": 1
+  },
+  "slv_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5996,
+     "bytes": 6093,
+     "words": 923,
+     "tokens": 1976
+    }
+   ],
+   "fertility": 2.140845070422535,
+   "se": null,
+   "n_blocks": 1
+  },
+  "hrv_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5952,
+     "bytes": 6079,
+     "words": 893,
+     "tokens": 2004
+    }
+   ],
+   "fertility": 2.244120940649496,
+   "se": null,
+   "n_blocks": 1
+  },
+  "bul_Cyrl": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5872,
+     "bytes": 10600,
+     "words": 910,
+     "tokens": 1917
+    }
+   ],
+   "fertility": 2.1065934065934067,
+   "se": null,
+   "n_blocks": 1
+  },
+  "slk_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5912,
+     "bytes": 6390,
+     "words": 873,
+     "tokens": 1995
+    }
+   ],
+   "fertility": 2.2852233676975944,
+   "se": null,
+   "n_blocks": 1
+  },
+  "ukr_Cyrl": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5919,
+     "bytes": 10800,
+     "words": 828,
+     "tokens": 1951
+    }
+   ],
+   "fertility": 2.356280193236715,
+   "se": null,
+   "n_blocks": 1
+  },
+  "hun_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5854,
+     "bytes": 6469,
+     "words": 793,
+     "tokens": 1861
+    }
+   ],
+   "fertility": 2.3467843631778056,
+   "se": null,
+   "n_blocks": 1
+  },
+  "est_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5931,
+     "bytes": 6116,
+     "words": 748,
+     "tokens": 1948
+    }
+   ],
+   "fertility": 2.6042780748663104,
+   "se": null,
+   "n_blocks": 1
+  },
+  "lit_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5827,
+     "bytes": 6198,
+     "words": 766,
+     "tokens": 1961
+    }
+   ],
+   "fertility": 2.560052219321149,
+   "se": null,
+   "n_blocks": 1
+  },
+  "lvs_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5927,
+     "bytes": 6498,
+     "words": 779,
+     "tokens": 2229
+    }
+   ],
+   "fertility": 2.8613607188703467,
+   "se": null,
+   "n_blocks": 1
+  },
+  "fin_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5941,
+     "bytes": 6176,
+     "words": 659,
+     "tokens": 1775
+    }
+   ],
+   "fertility": 2.693474962063733,
+   "se": null,
+   "n_blocks": 1
+  },
+  "ell_Grek": {
+   "blocks": [
+    {
+     "block": 3,
+     "chars": 5860,
+     "bytes": 10706,
+     "words": 870,
+     "tokens": 2046
+    }
+   ],
+   "fertility": 2.3517241379310345,
+   "se": null,
+   "n_blocks": 1
+  },
+  "mlt_Latn": {
+   "blocks": [
+    {
+     "block": 2,
+     "chars": 5981,
+     "bytes": 6299,
+     "words": 762,
+     "tokens": 2411
+    }
+   ],
+   "fertility": 3.164041994750656,
+   "se": null,
+   "n_blocks": 1
+  }
+ }
+}

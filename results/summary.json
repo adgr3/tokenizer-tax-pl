@@ -1,8 +1,8 @@
 {
- "n_tokenizers_measured": 69,
- "n_unique_llm": 51,
+ "n_tokenizers_measured": 70,
+ "n_unique_llm": 52,
  "n_local": 63,
- "n_api": 6,
+ "n_api": 7,
  "n_encoders": 4,
  "aliases": {
   "bielik_1_5b_v3": "bielik_4_5b_v3",
@@ -64,63 +64,63 @@
   "passed": true
  },
  "api_spend": {
-  "aihubmix_usd": 0.2919447186319997,
+  "aihubmix_usd": 0.3972847186319998,
   "openrouter_requests": {}
  },
  "polish": {
-  "mean": 2.447,
+  "mean": 2.44,
   "rank_of_25": 11,
   "tax_vs_en": 1.718,
   "min": 1.461,
   "min_tokenizer": "polish_gpt2",
   "max": 4.398,
   "max_tokenizer": "sl_konrad_456",
-  "spearman_with_other_languages_mean": 0.229,
+  "spearman_with_other_languages_mean": 0.24,
   "most_similar_language_ranking": "slv_Latn",
   "least_similar_language_ranking": "eng_Latn"
  },
  "languages_best": [
   {
    "language_pl": "angielski",
-   "mean": 1.579
+   "mean": 1.572
   },
   {
    "language_pl": "hiszpański",
-   "mean": 1.858
+   "mean": 1.848
   },
   {
    "language_pl": "francuski",
-   "mean": 1.96
+   "mean": 1.95
   }
  ],
  "languages_worst": [
   {
    "language_pl": "bułgarski",
-   "mean": 4.042
+   "mean": 4.005
   },
   {
    "language_pl": "ukraiński",
-   "mean": 4.678
+   "mean": 4.633
   },
   {
    "language_pl": "grecki",
-   "mean": 5.529
+   "mean": 5.468
   }
  ],
  "families": {
-  "romańskie": 2.037,
-  "germańskie": 2.129,
-  "celtyckie": 2.626,
-  "słowiańskie": 3.173,
-  "ugrofińskie": 3.36,
-  "bałtyckie": 3.371,
-  "semickie": 3.559,
-  "grecki": 5.529
+  "romańskie": 2.027,
+  "germańskie": 2.119,
+  "celtyckie": 2.62,
+  "słowiańskie": 3.154,
+  "ugrofińskie": 3.344,
+  "bałtyckie": 3.358,
+  "semickie": 3.551,
+  "grecki": 5.468
  },
  "scripts": {
-  "łaciński": 2.606,
-  "cyrylica": 4.36,
-  "grecki": 5.529
+  "łaciński": 2.595,
+  "cyrylica": 4.319,
+  "grecki": 5.468
  },
  "tokenizers_best_pl": [
   {
@@ -193,9 +193,9 @@
    "pl_vs_en": 2.012
   },
   "USA": {
-   "n": 17,
-   "pl": 2.535,
-   "pl_vs_en": 1.952
+   "n": 18,
+   "pl": 2.509,
+   "pl_vs_en": 1.938
   },
   "inne": {
    "n": 4,
@@ -215,9 +215,9 @@
    "pl_vs_en": 1.984
   },
   "nieznany (API)": {
-   "n": 5,
-   "pl": 2.518,
-   "pl_vs_en": 1.824
+   "n": 6,
+   "pl": 2.444,
+   "pl_vs_en": 1.804
   },
   "≤ 64 tys.": {
    "n": 19,

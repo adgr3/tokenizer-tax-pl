@@ -17,7 +17,7 @@ configs:
 
 # Ile tokenów na jedno słowo — polskie modele i 25 języków europejskich
 
-Pomiary „podatku tokenowego” (tokeny na słowo) dla 51 unikalnych tokenizerów LLM i 4
+Pomiary „podatku tokenowego” (tokeny na słowo) dla 52 unikalnych tokenizerów LLM i 4
 enkoderów na SIB-200 (split testowy, 25 języków), z replikacją arXiv 2605.24718 dla polskich modeli.
 Raport z wykresami i kod: https://github.com/adgr3/tokenizer-tax-pl
 

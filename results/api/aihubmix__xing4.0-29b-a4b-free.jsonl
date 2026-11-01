@@ -1,0 +1,1 @@
+{"lang": "__baseline__", "block": 0, "error": "HTTP 429: {\"error\":{\"message\":\"Sorry, you have reached the limit of the free model quota. Please switch to a paid model to enjoy unlimited concurrency. https://console.aihubmix.com/topup (tid: 2026110119085874714105285019755)\",\"type\":\"Aihubmix_api_error\"}}"}

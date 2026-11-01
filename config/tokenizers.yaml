@@ -1,0 +1,100 @@
+# Kandydaci do pomiaru LOKALNEGO (darmowo; pobierany jest tylko tokenizer, bez wag modelu).
+#
+# Pola:
+#   id            krótki identyfikator (nazwa pliku wyników)
+#   label         nazwa kolumny na wykresie
+#   kind          hf (AutoTokenizer) | tiktoken (kodowanie OpenAI) | tokenizer_json (plik tokenizer.json z repo)
+#   repo          repo na Hugging Face; alt = lista zapasowych repo (np. niebramkowane kopie unsloth/NousResearch)
+#   group         global | eu | pl  (kolejność kolumn na wykresie)
+#   origin        USA | Chiny | UE | Polska | inne
+#   polish_model  true = polski model z polecenia prowadzącego („PLLuM / Bielik / Slayer1B”); zostaje jako kolumna
+#                 w replikacji, nawet jeśli dzieli tokenizer z innym modelem
+#   calibration   nazwa modelu w overthelex/tokenizer-fertility-map (kalibracja z pracą)
+#   bench_ref     true = Slayer 1B, 5 modeli odniesienia Bench Team i model kontrolny Pythia (sekcja dla Bench Team)
+#   group: encoder = tokenizery modeli typu BERT (NERGAL to XLM-RoBERTa); osobna grupa, poza agregatem LLM
+#   trust_remote_code  true tylko gdy repo tego wymaga
+#   repo_type     model (domyślnie) | dataset — np. tokenizery ze zbioru SlayerLab/tokenizers
+#   subfolder     podkatalog z tokenizerem w repo (kind: hf); dla tokenizer_json ścieżka idzie w polu file
+#
+# UWAGA DLA AGENTA: nazwy repo są kandydatami. Każde sprawdź (czy istnieje, czy ma tokenizer). Brakujące lub
+# niedostępne pomiń i wpisz do results/pominiete.md z powodem. Możesz dopisać kolejne tokenizery według reguł
+# z ZADANIE_DLA_CLAUDE_CODE.md (krok 3). Repo za bramką zgody: najpierw spróbuj kopii z listy alt.
+
+tokenizers:
+  # --- 6 tokenizerów z pracy arXiv 2605.24718 (replikacja i kalibracja) ---
+  - {id: llama4_maverick, label: "Llama 4 Maverick", kind: hf, repo: meta-llama/Llama-4-Maverick-17B-128E-Instruct, alt: [unsloth/Llama-4-Maverick-17B-128E-Instruct], group: global, origin: USA, calibration: "Llama 4 Maverick"}
+  - {id: llama33, label: "Llama 3.3", kind: hf, repo: meta-llama/Llama-3.3-70B-Instruct, alt: [unsloth/Llama-3.3-70B-Instruct], group: global, origin: USA, calibration: "Llama 3.3 70B"}
+  - {id: gemma2, label: "Gemma 2", kind: hf, repo: google/gemma-2-27b, alt: [unsloth/gemma-2-27b], group: global, origin: USA, calibration: "Gemma 2 27B"}
+  - {id: gpt4o, label: "GPT-4o (o200k)", kind: tiktoken, repo: o200k_base, group: global, origin: USA, calibration: "GPT-4o"}
+  - {id: deepseek_v3, label: "DeepSeek V3", kind: hf, repo: deepseek-ai/DeepSeek-V3, group: global, origin: Chiny, calibration: "DeepSeek V3"}
+  - {id: qwen3, label: "Qwen3", kind: hf, repo: Qwen/Qwen3-32B, group: global, origin: Chiny, calibration: "Qwen3 32B"}
+
+  # --- polskie modele (polecenie prowadzącego) ---
+  - {id: bielik_11b_v3, label: "Bielik 11B v3", kind: hf, repo: speakleash/Bielik-11B-v3.0-Instruct, alt: [speakleash/Bielik-11B-v3.0-Instruct-FP8-Dynamic, speakleash/Bielik-11B-v3.0-Instruct-awq], group: pl, origin: Polska, polish_model: true}
+  - {id: bielik_4_5b_v3, label: "Bielik 4.5B v3", kind: hf, repo: speakleash/Bielik-4.5B-v3.0-Instruct, alt: [speakleash/Bielik-4.5B-v3.0-Instruct-FP8-Dynamic, adamo1139/Bielik-4.5B-v3-Instruct-ungated], group: pl, origin: Polska, polish_model: true}
+  - {id: bielik_1_5b_v3, label: "Bielik 1.5B v3", kind: hf, repo: speakleash/Bielik-1.5B-v3, revision: 4b25049621bf3952a1fc9314c89773102eda0333, alt: [cpral/Bielik-1.5B-v3-ungated, safestack/Bielik-1.5B-v3], group: pl, origin: Polska, polish_model: true, bench_ref: true}
+  - {id: pllum_12b, label: "PLLuM 12B", kind: hf, repo: CYFRAGOVPL/PLLuM-12B-instruct-2512, alt: [CYFRAGOVPL/PLLuM-12B-instruct], group: pl, origin: Polska, polish_model: true}
+  - {id: pllum_8b, label: "Llama-PLLuM 8B", kind: hf, repo: CYFRAGOVPL/Llama-PLLuM-8B-instruct-2512, alt: [CYFRAGOVPL/Llama-PLLuM-8B-instruct], group: pl, origin: Polska, polish_model: true}
+  - {id: pllum_4b, label: "PLLuM 4B", kind: hf, repo: CYFRAGOVPL/PLLuM-4B-instruct-2512, group: pl, origin: Polska, polish_model: true}
+  - {id: slayer1b, label: "Slayer1B", kind: tokenizer_json, repo: SlayerLab/Slayer1B-1.06, revision: ef81be58742544ad32e1afab38db011fec209609, file: tokenizer.json, group: pl, origin: Polska, polish_model: true, bench_ref: true}
+  - {id: gollem, label: "GoLLeM (dynaword-32k)", kind: hf, repo: Maggio33/GoLLeM-110M-PL-v3, group: pl, origin: Polska, polish_model: true}
+  - {id: qra_1b, label: "Qra 1B", kind: hf, repo: OPI-PG/Qra-1b, group: pl, origin: Polska, polish_model: true}
+  - {id: polish_gpt2, label: "polish-gpt2", kind: hf, repo: sdadas/polish-gpt2-medium, group: pl, origin: Polska}
+  - {id: bielik_pl_11b_v3, label: "Bielik-PL 11B v3", kind: hf, repo: speakleash/Bielik-PL-11B-v3.0-Instruct, group: pl, origin: Polska, polish_model: true}
+  - {id: bielik_minitron_7b, label: "Bielik Minitron 7B v3", kind: hf, repo: speakleash/Bielik-Minitron-7B-v3.0-Instruct, alt: [speakleash/Bielik-Minitron-7B-v3.0-Instruct-FP8-Dynamic], group: pl, origin: Polska, polish_model: true}
+  - {id: pllum_8x7b, label: "PLLuM 8x7B", kind: hf, repo: CYFRAGOVPL/PLLuM-8x7B-instruct-2412, group: pl, origin: Polska, polish_model: true}
+  - {id: apt3_1b, label: "APT3 1B (Azurro)", kind: hf, repo: Azurro/APT3-1B-Base, group: pl, origin: Polska}
+  - {id: gollem_v6, label: "GoLLeM v6 250M", kind: tokenizer_json, repo: SlayerLab/GoLLeM-v6-250M, file: tokenizer.json, group: pl, origin: Polska}
+  - {id: slayer149, label: "Slayer149", kind: tokenizer_json, repo: SlayerLab/Slayer149, file: tokenizer.json, group: pl, origin: Polska}
+  # tokenizery ze zbioru SlayerLab/tokenizers (warsztat; jeden na autora + kanoniczny 32k; tokenizery w parquet → pole row)
+  - {id: sl_polish_bpe_32k, label: "SlayerLab Polish BPE 32k", kind: tokenizer_json, repo: SlayerLab/tokenizers, repo_type: dataset, file: data/train-00000-of-00001.parquet, row: tokenizers/polish_bpe_32k.json, group: pl, origin: Polska}
+  - {id: sl_gollem_49k, label: "GollemTokenizer 49k", kind: tokenizer_json, repo: SlayerLab/tokenizers, repo_type: dataset, file: GollemTokenizer/49152/tokenizer.json, group: pl, origin: Polska}
+  - {id: sl_dawidm_wikinews_16k, label: "dawidm wikinews 16k", kind: tokenizer_json, repo: SlayerLab/tokenizers, repo_type: dataset, file: data/train-00000-of-00001.parquet, row: dawidm/vocabs/wikinews_16000.tokenizer.json, group: pl, origin: Polska}
+  - {id: sl_dawidm_syzyfowe_16k, label: "dawidm syzyfowe-prace 16k", kind: tokenizer_json, repo: SlayerLab/tokenizers, repo_type: dataset, file: data/train-00000-of-00001.parquet, row: dawidm/vocabs/syzyfowe-prace_16000.tokenizer.json, group: pl, origin: Polska}
+  - {id: sl_janek_8k, label: "Janek 8k", kind: tokenizer_json, repo: SlayerLab/tokenizers, repo_type: dataset, file: data/train-00000-of-00001.parquet, row: Janek/tokenizer.json, group: pl, origin: Polska}
+  - {id: sl_kasiamp_7k, label: "KasiaMP 6,7k (z regex)", kind: tokenizer_json, repo: SlayerLab/tokenizers, repo_type: dataset, file: data/train-00000-of-00001.parquet, row: KasiaMP/wyniki/hf_z_regex.json, group: pl, origin: Polska}
+  - {id: sl_konrad_456, label: "Konrad 456", kind: tokenizer_json, repo: SlayerLab/tokenizers, repo_type: dataset, file: data/train-00000-of-00001.parquet, row: Konrad/tokenizer.json, group: pl, origin: Polska}
+
+  # --- europejskie ---
+  - {id: eurollm, label: "EuroLLM", kind: hf, repo: utter-project/EuroLLM-1.7B, revision: c730cd9b616799ace3c65e927d63191446f59374, group: eu, origin: UE, bench_ref: true}
+  - {id: salamandra, label: "Salamandra", kind: hf, repo: BSC-LT/salamandra-2b, group: eu, origin: UE}
+  - {id: teuken, label: "Teuken", kind: hf, repo: openGPT-X/Teuken-7B-instruct-research-v0.4, group: eu, origin: UE, trust_remote_code: true}
+  - {id: apertus, label: "Apertus", kind: hf, repo: swiss-ai/Apertus-8B-2509, group: eu, origin: inne}
+  - {id: mistral_nemo, label: "Mistral Nemo (Tekken)", kind: hf, repo: mistralai/Mistral-Nemo-Base-2407, alt: [unsloth/Mistral-Nemo-Base-2407], group: eu, origin: UE}
+
+  # --- globalne, kolejne generacje i inne rodziny ---
+  - {id: qwen3_5, label: "Qwen3.5", kind: hf, repo: Qwen/Qwen3.5-0.8B-Base, revision: dc7cdfe2ee4154fa7e30f5b51ca41bfa40174e68, group: global, origin: Chiny, bench_ref: true}
+  - {id: gemma3, label: "Gemma 3", kind: hf, repo: google/gemma-3-4b-pt, alt: [unsloth/gemma-3-4b-pt], group: global, origin: USA}
+  - {id: gemma4, label: "Gemma 4", kind: hf, repo: google/gemma-4-31B, alt: [unsloth/gemma-4-31B], group: global, origin: USA}
+  - {id: gpt4_cl100k, label: "GPT-4 (cl100k)", kind: tiktoken, repo: cl100k_base, group: global, origin: USA}
+  - {id: gpt2, label: "GPT-2", kind: hf, repo: openai-community/gpt2, group: global, origin: USA}
+  - {id: llama2, label: "Llama 2", kind: hf, repo: NousResearch/Llama-2-7b-hf, group: global, origin: USA}
+  - {id: pythia, label: "Pythia (GPT-NeoX)", kind: hf, repo: EleutherAI/pythia-1b-v0, revision: step143000, alt: [EleutherAI/pythia-1b], group: global, origin: USA, bench_ref: true}
+  - {id: phi4, label: "Phi-4", kind: hf, repo: microsoft/phi-4, group: global, origin: USA}
+  - {id: olmo2, label: "OLMo 2", kind: hf, repo: allenai/OLMo-2-1124-7B, group: global, origin: USA}
+  - {id: smollm3, label: "SmolLM3", kind: hf, repo: HuggingFaceTB/SmolLM3-3B, group: global, origin: USA}
+  - {id: lfm2_5, label: "LFM2.5", kind: hf, repo: LiquidAI/LFM2.5-1.2B-Base, revision: 7453bca97ca1e67754c4035a4b4c584e1c9dd725, group: global, origin: USA, bench_ref: true}
+  - {id: lfm3, label: "LFM3", kind: hf, repo: LiquidAI/LFM3-1.7B-Base, revision: 545fc8f4c7b5fa9f405105274cd29c4f8f44b526, group: global, origin: USA, trust_remote_code: true, bench_ref: true}
+  - {id: granite, label: "Granite", kind: hf, repo: ibm-granite/granite-3.3-8b-base, group: global, origin: USA}
+  - {id: nemotron, label: "Nemotron", kind: hf, repo: nvidia/NVIDIA-Nemotron-Nano-9B-v2, group: global, origin: USA}
+  - {id: falcon3, label: "Falcon 3", kind: hf, repo: tiiuae/Falcon3-7B-Base, group: global, origin: inne}
+  - {id: exaone4, label: "EXAONE 4", kind: hf, repo: LGAI-EXAONE/EXAONE-4.0-1.2B, group: global, origin: inne}
+  - {id: glm, label: "GLM-4.5", kind: hf, repo: zai-org/GLM-4.5, group: global, origin: Chiny}
+  - {id: kimi_k2, label: "Kimi K2", kind: hf, repo: moonshotai/Kimi-K2-Instruct, group: global, origin: Chiny, trust_remote_code: true}
+  - {id: minimax, label: "MiniMax", kind: hf, repo: MiniMaxAI/MiniMax-M2, group: global, origin: Chiny}
+
+  # --- z pracy arXiv 2605.24718 (poza 6 z wykresu) ---
+  - {id: mistral_large3, label: "Mistral Large 3 (z pracy)", kind: hf, repo: mistralai/Mistral-Large-3-675B-Instruct-2512, group: global, origin: UE}
+  - {id: nemotron_super3, label: "Nemotron Super 3 (z pracy)", kind: hf, repo: nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16, group: global, origin: USA}
+  # --- kolejne rodziny z własnym tokenizerem (najnowsza generacja) ---
+  - {id: gpt_oss, label: "gpt-oss (o200k harmony)", kind: hf, repo: openai/gpt-oss-20b, group: global, origin: USA}
+  - {id: command_a, label: "Cohere Command A", kind: hf, repo: CohereLabs/c4ai-command-a-03-2025, alt: [unsloth/c4ai-command-a-03-2025], group: global, origin: inne}
+  - {id: jamba2, label: "AI21 Jamba2", kind: hf, repo: ai21labs/AI21-Jamba2-Mini, group: global, origin: inne}
+  - {id: granite4, label: "Granite 4", kind: hf, repo: ibm-granite/granite-4.0-h-small, group: global, origin: USA}
+  - {id: olmo3, label: "OLMo 3", kind: hf, repo: allenai/Olmo-3-1025-7B, group: global, origin: USA}
+
+  # --- enkodery (NERGAL = XLM-RoBERTa-large + 2 znaczniki); osobna grupa, poza agregatem LLM ---
+  - {id: nergal, label: "NERGAL (XLM-R)", kind: hf, repo: SlayerLab/NERGAL, group: encoder, origin: Polska}
+  - {id: xlm_roberta, label: "XLM-RoBERTa", kind: hf, repo: FacebookAI/xlm-roberta-large, group: encoder, origin: USA}
+  - {id: herbert, label: "HerBERT", kind: hf, repo: allegro/herbert-large-cased, group: encoder, origin: Polska}
+  - {id: polish_roberta, label: "Polish RoBERTa", kind: hf, repo: sdadas/polish-roberta-large-v2, group: encoder, origin: Polska}

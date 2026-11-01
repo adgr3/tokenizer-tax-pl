@@ -1,0 +1,983 @@
+{
+ "id": "gollem_v6",
+ "label": "GoLLeM v6 250M",
+ "method": "local",
+ "kind": "tokenizer_json",
+ "repo_used": "SlayerLab/GoLLeM-v6-250M",
+ "group": "pl",
+ "origin": "Polska",
+ "polish_model": false,
+ "bench_ref": false,
+ "calibration": null,
+ "vocab_size": 32768,
+ "fingerprint": "c9a160da2156f84d",
+ "meta": {
+  "source": "hf:SlayerLab/GoLLeM-v6-250M/tokenizer.json",
+  "revision": "77d75a2b48eaab7aec59816f9849cee75a7bdfc1"
+ },
+ "seconds": 0.4,
+ "measured_at": "2026-11-01T17:32:13+00:00",
+ "languages": {
+  "eng_Latn": {
+   "blocks": [
+    {
+     "chars": 5927,
+     "bytes": 5929,
+     "words": 980,
+     "tokens": 1351
+    },
+    {
+     "chars": 5880,
+     "bytes": 5880,
+     "words": 945,
+     "tokens": 1318
+    },
+    {
+     "chars": 5954,
+     "bytes": 5956,
+     "words": 971,
+     "tokens": 1338
+    },
+    {
+     "chars": 5980,
+     "bytes": 5989,
+     "words": 966,
+     "tokens": 1337
+    },
+    {
+     "chars": 3057,
+     "bytes": 3059,
+     "words": 525,
+     "tokens": 704
+    }
+   ],
+   "fertility": 1.3752503280669672,
+   "se": 0.00908553844731349,
+   "n_blocks": 5
+  },
+  "spa_Latn": {
+   "blocks": [
+    {
+     "chars": 5948,
+     "bytes": 6067,
+     "words": 990,
+     "tokens": 2127
+    },
+    {
+     "chars": 5987,
+     "bytes": 6088,
+     "words": 964,
+     "tokens": 2148
+    },
+    {
+     "chars": 5985,
+     "bytes": 6080,
+     "words": 963,
+     "tokens": 2135
+    },
+    {
+     "chars": 5755,
+     "bytes": 5867,
+     "words": 937,
+     "tokens": 2047
+    },
+    {
+     "chars": 5884,
+     "bytes": 5977,
+     "words": 983,
+     "tokens": 2163
+    },
+    {
+     "chars": 2287,
+     "bytes": 2335,
+     "words": 374,
+     "tokens": 827
+    }
+   ],
+   "fertility": 2.198333233016322,
+   "se": 0.011670126016064836,
+   "n_blocks": 6
+  },
+  "fra_Latn": {
+   "blocks": [
+    {
+     "chars": 5929,
+     "bytes": 6132,
+     "words": 962,
+     "tokens": 2174
+    },
+    {
+     "chars": 5907,
+     "bytes": 6121,
+     "words": 952,
+     "tokens": 2112
+    },
+    {
+     "chars": 5908,
+     "bytes": 6150,
+     "words": 945,
+     "tokens": 2179
+    },
+    {
+     "chars": 5885,
+     "bytes": 6093,
+     "words": 955,
+     "tokens": 2104
+    },
+    {
+     "chars": 5959,
+     "bytes": 6163,
+     "words": 962,
+     "tokens": 2171
+    },
+    {
+     "chars": 2307,
+     "bytes": 2383,
+     "words": 371,
+     "tokens": 833
+    }
+   ],
+   "fertility": 2.2482273162557624,
+   "se": 0.014664276888324387,
+   "n_blocks": 6
+  },
+  "por_Latn": {
+   "blocks": [
+    {
+     "chars": 5928,
+     "bytes": 6108,
+     "words": 978,
+     "tokens": 2241
+    },
+    {
+     "chars": 5994,
+     "bytes": 6182,
+     "words": 982,
+     "tokens": 2286
+    },
+    {
+     "chars": 5894,
+     "bytes": 6057,
+     "words": 954,
+     "tokens": 2164
+    },
+    {
+     "chars": 5988,
+     "bytes": 6163,
+     "words": 969,
+     "tokens": 2250
+    },
+    {
+     "chars": 4994,
+     "bytes": 5169,
+     "words": 812,
+     "tokens": 1955
+    }
+   ],
+   "fertility": 2.323454798182636,
+   "se": 0.023635099323602634,
+   "n_blocks": 5
+  },
+  "ita_Latn": {
+   "blocks": [
+    {
+     "chars": 5892,
+     "bytes": 5924,
+     "words": 901,
+     "tokens": 2163
+    },
+    {
+     "chars": 5832,
+     "bytes": 5871,
+     "words": 884,
+     "tokens": 2105
+    },
+    {
+     "chars": 5947,
+     "bytes": 5974,
+     "words": 910,
+     "tokens": 2120
+    },
+    {
+     "chars": 5809,
+     "bytes": 5848,
+     "words": 888,
+     "tokens": 2092
+    },
+    {
+     "chars": 5872,
+     "bytes": 5922,
+     "words": 912,
+     "tokens": 2170
+    },
+    {
+     "chars": 2138,
+     "bytes": 2149,
+     "words": 334,
+     "tokens": 772
+    }
+   ],
+   "fertility": 2.3596961736920865,
+   "se": 0.013881133281431849,
+   "n_blocks": 6
+  },
+  "nld_Latn": {
+   "blocks": [
+    {
+     "chars": 5908,
+     "bytes": 5918,
+     "words": 913,
+     "tokens": 2243
+    },
+    {
+     "chars": 5945,
+     "bytes": 5948,
+     "words": 916,
+     "tokens": 2262
+    },
+    {
+     "chars": 5867,
+     "bytes": 5880,
+     "words": 908,
+     "tokens": 2175
+    },
+    {
+     "chars": 5966,
+     "bytes": 5974,
+     "words": 919,
+     "tokens": 2259
+    },
+    {
+     "chars": 6291,
+     "bytes": 6301,
+     "words": 978,
+     "tokens": 2439
+    }
+   ],
+   "fertility": 2.454702893424688,
+   "se": 0.01625763244417131,
+   "n_blocks": 5
+  },
+  "deu_Latn": {
+   "blocks": [
+    {
+     "chars": 5919,
+     "bytes": 6006,
+     "words": 840,
+     "tokens": 2333
+    },
+    {
+     "chars": 5999,
+     "bytes": 6093,
+     "words": 817,
+     "tokens": 2412
+    },
+    {
+     "chars": 5858,
+     "bytes": 5952,
+     "words": 822,
+     "tokens": 2311
+    },
+    {
+     "chars": 5906,
+     "bytes": 5989,
+     "words": 825,
+     "tokens": 2307
+    },
+    {
+     "chars": 5929,
+     "bytes": 6036,
+     "words": 847,
+     "tokens": 2379
+    },
+    {
+     "chars": 1432,
+     "bytes": 1454,
+     "words": 191,
+     "tokens": 573
+    }
+   ],
+   "fertility": 2.857696868595253,
+   "se": 0.03827219007739363,
+   "n_blocks": 6
+  },
+  "dan_Latn": {
+   "blocks": [
+    {
+     "chars": 5780,
+     "bytes": 5910,
+     "words": 887,
+     "tokens": 2261
+    },
+    {
+     "chars": 5878,
+     "bytes": 5989,
+     "words": 925,
+     "tokens": 2262
+    },
+    {
+     "chars": 5932,
+     "bytes": 6034,
+     "words": 916,
+     "tokens": 2245
+    },
+    {
+     "chars": 5928,
+     "bytes": 6045,
+     "words": 916,
+     "tokens": 2271
+    },
+    {
+     "chars": 3847,
+     "bytes": 3949,
+     "words": 641,
+     "tokens": 1556
+    }
+   ],
+   "fertility": 2.4704070443395274,
+   "se": 0.021346063849918717,
+   "n_blocks": 5
+  },
+  "swe_Latn": {
+   "blocks": [
+    {
+     "chars": 5978,
+     "bytes": 6206,
+     "words": 908,
+     "tokens": 2405
+    },
+    {
+     "chars": 5828,
+     "bytes": 6067,
+     "words": 894,
+     "tokens": 2376
+    },
+    {
+     "chars": 5868,
+     "bytes": 6099,
+     "words": 875,
+     "tokens": 2331
+    },
+    {
+     "chars": 5924,
+     "bytes": 6174,
+     "words": 903,
+     "tokens": 2429
+    },
+    {
+     "chars": 3185,
+     "bytes": 3332,
+     "words": 503,
+     "tokens": 1315
+    }
+   ],
+   "fertility": 2.6549266261661186,
+   "se": 0.012254069887732538,
+   "n_blocks": 5
+  },
+  "ron_Latn": {
+   "blocks": [
+    {
+     "chars": 5764,
+     "bytes": 6036,
+     "words": 912,
+     "tokens": 2605
+    },
+    {
+     "chars": 5981,
+     "bytes": 6294,
+     "words": 948,
+     "tokens": 2705
+    },
+    {
+     "chars": 5999,
+     "bytes": 6302,
+     "words": 936,
+     "tokens": 2734
+    },
+    {
+     "chars": 5799,
+     "bytes": 6087,
+     "words": 923,
+     "tokens": 2621
+    },
+    {
+     "chars": 6579,
+     "bytes": 6940,
+     "words": 1052,
+     "tokens": 3075
+    }
+   ],
+   "fertility": 2.878666490842509,
+   "se": 0.01790547115517884,
+   "n_blocks": 5
+  },
+  "pol_Latn": {
+   "blocks": [
+    {
+     "chars": 5886,
+     "bytes": 6209,
+     "words": 814,
+     "tokens": 1373
+    },
+    {
+     "chars": 5914,
+     "bytes": 6278,
+     "words": 824,
+     "tokens": 1322
+    },
+    {
+     "chars": 5871,
+     "bytes": 6223,
+     "words": 812,
+     "tokens": 1397
+    },
+    {
+     "chars": 5963,
+     "bytes": 6298,
+     "words": 833,
+     "tokens": 1352
+    },
+    {
+     "chars": 4929,
+     "bytes": 5250,
+     "words": 692,
+     "tokens": 1141
+    }
+   ],
+   "fertility": 1.6566875237696859,
+   "se": 0.0210923915368583,
+   "n_blocks": 5
+  },
+  "gle_Latn": {
+   "blocks": [
+    {
+     "chars": 5953,
+     "bytes": 6351,
+     "words": 997,
+     "tokens": 2843
+    },
+    {
+     "chars": 5929,
+     "bytes": 6341,
+     "words": 975,
+     "tokens": 2857
+    },
+    {
+     "chars": 5940,
+     "bytes": 6309,
+     "words": 989,
+     "tokens": 2750
+    },
+    {
+     "chars": 5848,
+     "bytes": 6245,
+     "words": 977,
+     "tokens": 2810
+    },
+    {
+     "chars": 5979,
+     "bytes": 6373,
+     "words": 1004,
+     "tokens": 2854
+    },
+    {
+     "chars": 1466,
+     "bytes": 1563,
+     "words": 252,
+     "tokens": 689
+    }
+   ],
+   "fertility": 2.835884245923793,
+   "se": 0.028420064827096747,
+   "n_blocks": 6
+  },
+  "ces_Latn": {
+   "blocks": [
+    {
+     "chars": 5968,
+     "bytes": 6642,
+     "words": 899,
+     "tokens": 3169
+    },
+    {
+     "chars": 5932,
+     "bytes": 6588,
+     "words": 893,
+     "tokens": 3079
+    },
+    {
+     "chars": 5977,
+     "bytes": 6637,
+     "words": 900,
+     "tokens": 3176
+    },
+    {
+     "chars": 5927,
+     "bytes": 6683,
+     "words": 898,
+     "tokens": 3235
+    },
+    {
+     "chars": 2189,
+     "bytes": 2428,
+     "words": 331,
+     "tokens": 1177
+    }
+   ],
+   "fertility": 3.5320372312688564,
+   "se": 0.02515979638043676,
+   "n_blocks": 5
+  },
+  "slv_Latn": {
+   "blocks": [
+    {
+     "chars": 5902,
+     "bytes": 6030,
+     "words": 901,
+     "tokens": 2455
+    },
+    {
+     "chars": 5817,
+     "bytes": 5956,
+     "words": 844,
+     "tokens": 2423
+    },
+    {
+     "chars": 5996,
+     "bytes": 6093,
+     "words": 923,
+     "tokens": 2446
+    },
+    {
+     "chars": 5942,
+     "bytes": 6089,
+     "words": 896,
+     "tokens": 2522
+    },
+    {
+     "chars": 3105,
+     "bytes": 3190,
+     "words": 467,
+     "tokens": 1343
+    }
+   ],
+   "fertility": 2.787238533986989,
+   "se": 0.04376944527336076,
+   "n_blocks": 5
+  },
+  "hrv_Latn": {
+   "blocks": [
+    {
+     "chars": 5916,
+     "bytes": 6068,
+     "words": 887,
+     "tokens": 2498
+    },
+    {
+     "chars": 5875,
+     "bytes": 6034,
+     "words": 861,
+     "tokens": 2485
+    },
+    {
+     "chars": 5952,
+     "bytes": 6079,
+     "words": 893,
+     "tokens": 2468
+    },
+    {
+     "chars": 5996,
+     "bytes": 6160,
+     "words": 895,
+     "tokens": 2559
+    },
+    {
+     "chars": 2793,
+     "bytes": 2882,
+     "words": 409,
+     "tokens": 1227
+    }
+   ],
+   "fertility": 2.8650698084687343,
+   "se": 0.03958731483342737,
+   "n_blocks": 5
+  },
+  "bul_Cyrl": {
+   "blocks": [
+    {
+     "chars": 5772,
+     "bytes": 10393,
+     "words": 900,
+     "tokens": 4615
+    },
+    {
+     "chars": 5928,
+     "bytes": 10664,
+     "words": 919,
+     "tokens": 4730
+    },
+    {
+     "chars": 5872,
+     "bytes": 10600,
+     "words": 910,
+     "tokens": 4738
+    },
+    {
+     "chars": 5987,
+     "bytes": 10871,
+     "words": 902,
+     "tokens": 4787
+    },
+    {
+     "chars": 4635,
+     "bytes": 8389,
+     "words": 721,
+     "tokens": 3720
+    }
+   ],
+   "fertility": 5.189573204915992,
+   "se": 0.032128862179551916,
+   "n_blocks": 5
+  },
+  "slk_Latn": {
+   "blocks": [
+    {
+     "chars": 5829,
+     "bytes": 6307,
+     "words": 866,
+     "tokens": 2849
+    },
+    {
+     "chars": 5815,
+     "bytes": 6411,
+     "words": 845,
+     "tokens": 2909
+    },
+    {
+     "chars": 5912,
+     "bytes": 6390,
+     "words": 873,
+     "tokens": 2795
+    },
+    {
+     "chars": 5933,
+     "bytes": 6493,
+     "words": 870,
+     "tokens": 2944
+    },
+    {
+     "chars": 3298,
+     "bytes": 3599,
+     "words": 485,
+     "tokens": 1616
+    }
+   ],
+   "fertility": 3.3299824723726217,
+   "se": 0.04104147295365596,
+   "n_blocks": 5
+  },
+  "ukr_Cyrl": {
+   "blocks": [
+    {
+     "chars": 5811,
+     "bytes": 10544,
+     "words": 827,
+     "tokens": 5234
+    },
+    {
+     "chars": 5963,
+     "bytes": 10907,
+     "words": 826,
+     "tokens": 5348
+    },
+    {
+     "chars": 5919,
+     "bytes": 10800,
+     "words": 828,
+     "tokens": 5393
+    },
+    {
+     "chars": 5986,
+     "bytes": 10964,
+     "words": 841,
+     "tokens": 5369
+    },
+    {
+     "chars": 4014,
+     "bytes": 7327,
+     "words": 580,
+     "tokens": 3648
+    }
+   ],
+   "fertility": 6.398096538478765,
+   "se": 0.04234508075879407,
+   "n_blocks": 5
+  },
+  "hun_Latn": {
+   "blocks": [
+    {
+     "chars": 5968,
+     "bytes": 6569,
+     "words": 799,
+     "tokens": 3166
+    },
+    {
+     "chars": 5904,
+     "bytes": 6492,
+     "words": 774,
+     "tokens": 3065
+    },
+    {
+     "chars": 5854,
+     "bytes": 6469,
+     "words": 793,
+     "tokens": 3116
+    },
+    {
+     "chars": 5949,
+     "bytes": 6555,
+     "words": 799,
+     "tokens": 3133
+    },
+    {
+     "chars": 4597,
+     "bytes": 5057,
+     "words": 599,
+     "tokens": 2395
+    }
+   ],
+   "fertility": 3.954253094056038,
+   "se": 0.013705443403024473,
+   "n_blocks": 5
+  },
+  "est_Latn": {
+   "blocks": [
+    {
+     "chars": 5878,
+     "bytes": 6036,
+     "words": 736,
+     "tokens": 2615
+    },
+    {
+     "chars": 5922,
+     "bytes": 6090,
+     "words": 746,
+     "tokens": 2628
+    },
+    {
+     "chars": 5931,
+     "bytes": 6116,
+     "words": 748,
+     "tokens": 2622
+    },
+    {
+     "chars": 5894,
+     "bytes": 6078,
+     "words": 754,
+     "tokens": 2670
+    },
+    {
+     "chars": 2936,
+     "bytes": 3030,
+     "words": 384,
+     "tokens": 1367
+    }
+   ],
+   "fertility": 3.5364269638919588,
+   "se": 0.009997512402805352,
+   "n_blocks": 5
+  },
+  "lit_Latn": {
+   "blocks": [
+    {
+     "chars": 5808,
+     "bytes": 6209,
+     "words": 756,
+     "tokens": 2905
+    },
+    {
+     "chars": 5927,
+     "bytes": 6317,
+     "words": 795,
+     "tokens": 2866
+    },
+    {
+     "chars": 5827,
+     "bytes": 6198,
+     "words": 766,
+     "tokens": 2789
+    },
+    {
+     "chars": 5902,
+     "bytes": 6302,
+     "words": 782,
+     "tokens": 2904
+    },
+    {
+     "chars": 3664,
+     "bytes": 3913,
+     "words": 483,
+     "tokens": 1824
+    }
+   ],
+   "fertility": 3.7157137417951054,
+   "se": 0.043370097764984045,
+   "n_blocks": 5
+  },
+  "lvs_Latn": {
+   "blocks": [
+    {
+     "chars": 5841,
+     "bytes": 6422,
+     "words": 794,
+     "tokens": 3175
+    },
+    {
+     "chars": 5872,
+     "bytes": 6413,
+     "words": 807,
+     "tokens": 3110
+    },
+    {
+     "chars": 5927,
+     "bytes": 6498,
+     "words": 779,
+     "tokens": 3143
+    },
+    {
+     "chars": 5976,
+     "bytes": 6489,
+     "words": 826,
+     "tokens": 3111
+    },
+    {
+     "chars": 3845,
+     "bytes": 4180,
+     "words": 538,
+     "tokens": 2023
+    }
+   ],
+   "fertility": 3.882749335683838,
+   "se": 0.05741643814522165,
+   "n_blocks": 5
+  },
+  "fin_Latn": {
+   "blocks": [
+    {
+     "chars": 5890,
+     "bytes": 6102,
+     "words": 644,
+     "tokens": 2699
+    },
+    {
+     "chars": 5827,
+     "bytes": 6025,
+     "words": 650,
+     "tokens": 2644
+    },
+    {
+     "chars": 5941,
+     "bytes": 6176,
+     "words": 659,
+     "tokens": 2731
+    },
+    {
+     "chars": 5882,
+     "bytes": 6137,
+     "words": 665,
+     "tokens": 2704
+    },
+    {
+     "chars": 5380,
+     "bytes": 5585,
+     "words": 635,
+     "tokens": 2450
+    }
+   ],
+   "fertility": 4.065455408290494,
+   "se": 0.056958845330938465,
+   "n_blocks": 5
+  },
+  "ell_Grek": {
+   "blocks": [
+    {
+     "chars": 5981,
+     "bytes": 10812,
+     "words": 920,
+     "tokens": 9429
+    },
+    {
+     "chars": 5900,
+     "bytes": 10738,
+     "words": 871,
+     "tokens": 9429
+    },
+    {
+     "chars": 5971,
+     "bytes": 10792,
+     "words": 898,
+     "tokens": 9409
+    },
+    {
+     "chars": 5860,
+     "bytes": 10706,
+     "words": 870,
+     "tokens": 9395
+    },
+    {
+     "chars": 5838,
+     "bytes": 10650,
+     "words": 874,
+     "tokens": 9305
+    },
+    {
+     "chars": 2487,
+     "bytes": 4557,
+     "words": 374,
+     "tokens": 3994
+    }
+   ],
+   "fertility": 10.612762887071897,
+   "se": 0.08870234178185511,
+   "n_blocks": 6
+  },
+  "mlt_Latn": {
+   "blocks": [
+    {
+     "chars": 5874,
+     "bytes": 6177,
+     "words": 764,
+     "tokens": 2917
+    },
+    {
+     "chars": 5968,
+     "bytes": 6319,
+     "words": 796,
+     "tokens": 2935
+    },
+    {
+     "chars": 5981,
+     "bytes": 6299,
+     "words": 762,
+     "tokens": 2964
+    },
+    {
+     "chars": 5848,
+     "bytes": 6152,
+     "words": 756,
+     "tokens": 2853
+    },
+    {
+     "chars": 5987,
+     "bytes": 6287,
+     "words": 766,
+     "tokens": 2965
+    }
+   ],
+   "fertility": 3.807915848073422,
+   "se": 0.036393703195035626,
+   "n_blocks": 5
+  }
+ }
+}

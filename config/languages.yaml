@@ -1,0 +1,29 @@
+# 25 języków jak w arXiv 2605.24718 i na wykresie (24 języki UE + ukraiński).
+# code = konfiguracja w Davlan/sib200 (kody FLORES-200).
+# name_en = nazwa w zbiorze overthelex/tokenizer-fertility-map (do kalibracji).
+languages:
+  - {code: eng_Latn, pl: angielski,     name_en: English,    family: germańskie, script: łaciński}
+  - {code: spa_Latn, pl: hiszpański,    name_en: Spanish,    family: romańskie,  script: łaciński}
+  - {code: fra_Latn, pl: francuski,     name_en: French,     family: romańskie,  script: łaciński}
+  - {code: por_Latn, pl: portugalski,   name_en: Portuguese, family: romańskie,  script: łaciński}
+  - {code: ita_Latn, pl: włoski,        name_en: Italian,    family: romańskie,  script: łaciński}
+  - {code: nld_Latn, pl: niderlandzki,  name_en: Dutch,      family: germańskie, script: łaciński}
+  - {code: deu_Latn, pl: niemiecki,     name_en: German,     family: germańskie, script: łaciński}
+  - {code: dan_Latn, pl: duński,        name_en: Danish,     family: germańskie, script: łaciński}
+  - {code: swe_Latn, pl: szwedzki,      name_en: Swedish,    family: germańskie, script: łaciński}
+  - {code: ron_Latn, pl: rumuński,      name_en: Romanian,   family: romańskie,  script: łaciński}
+  - {code: pol_Latn, pl: polski,        name_en: Polish,     family: słowiańskie, script: łaciński}
+  - {code: gle_Latn, pl: irlandzki,     name_en: Irish,      family: celtyckie,  script: łaciński}
+  - {code: ces_Latn, pl: czeski,        name_en: Czech,      family: słowiańskie, script: łaciński}
+  - {code: slv_Latn, pl: słoweński,     name_en: Slovenian,  family: słowiańskie, script: łaciński}
+  - {code: hrv_Latn, pl: chorwacki,     name_en: Croatian,   family: słowiańskie, script: łaciński}
+  - {code: bul_Cyrl, pl: bułgarski,     name_en: Bulgarian,  family: słowiańskie, script: cyrylica}
+  - {code: slk_Latn, pl: słowacki,      name_en: Slovak,     family: słowiańskie, script: łaciński}
+  - {code: ukr_Cyrl, pl: ukraiński,     name_en: Ukrainian,  family: słowiańskie, script: cyrylica}
+  - {code: hun_Latn, pl: węgierski,     name_en: Hungarian,  family: ugrofińskie, script: łaciński}
+  - {code: est_Latn, pl: estoński,      name_en: Estonian,   family: ugrofińskie, script: łaciński}
+  - {code: lit_Latn, pl: litewski,      name_en: Lithuanian, family: bałtyckie,  script: łaciński}
+  - {code: lvs_Latn, pl: łotewski,      name_en: Latvian,    family: bałtyckie,  script: łaciński}
+  - {code: fin_Latn, pl: fiński,        name_en: Finnish,    family: ugrofińskie, script: łaciński}
+  - {code: ell_Grek, pl: grecki,        name_en: Greek,      family: grecki,     script: grecki}
+  - {code: mlt_Latn, pl: maltański,     name_en: Maltese,    family: semickie,   script: łaciński}

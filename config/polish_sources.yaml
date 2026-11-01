@@ -1,0 +1,27 @@
+# Polski osobno: różne rodzaje tekstu (jak u autora wykresu — 11 źródeł z SlayerLab/polish-dynaword).
+# AGENT: najpierw sprawdź strukturę zbioru (nazwy kolumn i wartości pola źródła) i popraw pola niżej.
+dataset: SlayerLab/polish-dynaword
+split: train
+text_field: text          # sprawdzone (kolumny: id, text, source, added, created, token_count, license, author)
+source_field: source      # sprawdzone; wartość = nazwa katalogu data/<źródło>/
+chars_per_source: 120000  # ok. 20 bloków po 6000 znaków na źródło
+max_chars_per_doc: 20000  # z jednego dokumentu bierzemy najwyżej tyle, żeby próbka miała wiele dokumentów
+max_rows_scanned: 400000  # przeglądamy strumieniowo, bez pobierania całego zbioru
+# Nazwy źródeł dokładnie tak, jak w polu source_field; label = nazwa w raporcie.
+sources:
+  - {value: "dziennik_ustaw", label: "Dziennik Ustaw", data_files: "data/dziennik_ustaw/dziennik_ustaw.parquet"}
+  - {value: "eurlex", label: "Prawo UE (EUR-Lex)", data_files: "data/eurlex/eurlex.parquet"}
+  - {value: "wikipedia", label: "Wikipedia", data_files: "data/wikipedia/wikipedia.parquet"}
+  - {value: "wolne_lektury", label: "Wolne Lektury", data_files: "data/wolne_lektury/wolne_lektury.parquet"}
+  - {value: "parliamentary", label: "Stenogramy Sejmu", data_files: "data/parliamentary/parliamentary.parquet"}
+  - {value: "sejm_committee_transcripts", label: "Komisje sejmowe", data_files: "data/sejm_committee_transcripts/sejm_committee_transcripts.parquet"}
+  - {value: "wikinews", label: "Wikinews (prasa)", data_files: "data/wikinews/wikinews.parquet"}
+  - {value: "global_voices", label: "Global Voices (blogi)", data_files: "data/global_voices/global_voices.parquet"}
+  - {value: "plwiki_talk", label: "Dyskusje Wikipedii (forum)", data_files: "data/plwiki_talk/plwiki_talk.parquet"}
+  - {value: "govpl", label: "gov.pl (administracja)", data_files: "data/govpl/govpl.parquet"}
+  - {value: "ted_pl", label: "Przetargi publiczne (TED)", data_files: "data/ted_pl/ted_pl.parquet"}
+  - {value: "biblioteka_nauki", label: "Artykuły naukowe", data_files: "data/biblioteka_nauki/biblioteka_nauki.parquet"}
+#  - {value: "dziennik_ustaw", label: "Dziennik Ustaw"}
+#  - {value: "wikipedia", label: "Wikipedia"}
+#  - {value: "wolne_lektury", label: "Wolne Lektury"}
+#  - {value: "sejm_stenogramy", label: "Stenogramy Sejmu"}

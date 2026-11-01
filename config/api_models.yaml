@@ -1,0 +1,33 @@
+# Modele mierzone przez API. AGENT UZUPEŁNIA tę listę po kroku `python -m tt.api_models`
+# (plik results/api_catalog/kandydaci.csv) według reguł z ZADANIE_DLA_CLAUDE_CODE.md, krok 6.
+#
+# Pola: id, label, provider (aihubmix | openrouter), model (dokładne ID u dostawcy),
+#       input_usd_per_m (cena wejścia za 1 mln tokenów; AIHubMix ≤ 0.20, OpenRouter = 0),
+#       output_usd_per_m (opcjonalnie), origin, note (np. „kontrola: tokenizer publiczny = qwen3”).
+#
+# Przykłady (do weryfikacji — ID i ceny sprawdź w katalogu dostawcy):
+models:
+  # --- AIHubMix, płatne (cena wejścia ≤ 0,20 USD/1M; ceny z https://aihubmix.com/api/v1/models, 2026-11-01) ---
+  - {id: api_claude_haiku55, label: "Claude Haiku 5.5", provider: aihubmix, model: "claude-haiku-5-5", input_usd_per_m: 0.10, output_usd_per_m: 0.50, origin: USA}
+  - {id: api_grok41_fast, label: "Grok 4.1 Fast", provider: aihubmix, model: "grok-4-1-fast-non-reasoning", input_usd_per_m: 0.20, output_usd_per_m: 0.50, origin: USA}
+  - {id: api_gemini_pro, label: "Gemini Pro (1.0)", provider: aihubmix, model: "gemini-pro", input_usd_per_m: 0.20, output_usd_per_m: 0.60, origin: USA, note: "jedyny Gemini z ceną wejścia ≤ 0,20 USD/1M; nowsze Gemini (3.x Flash-Lite od 0,25) za drogie"}
+  - {id: api_mercury25, label: "Mercury 2.5 (Inception)", provider: aihubmix, model: "mercury-2.5", input_usd_per_m: 0.20, output_usd_per_m: 0.75, origin: USA}
+  - {id: api_doubao_seed2, label: "Doubao Seed 2.0 Mini", provider: aihubmix, model: "doubao-seed-2-0-mini-260428", input_usd_per_m: 0.030136, output_usd_per_m: 0.30136, origin: Chiny}
+  - {id: api_ernie45_turbo, label: "ERNIE 4.5 Turbo", provider: aihubmix, model: "ernie-4.5-turbo-latest", input_usd_per_m: 0.11, output_usd_per_m: 0.44, origin: Chiny, note: "ernie-x1-turbo: brak dostępu (HTTP 401)"}
+  - {id: api_hunyuan3, label: "Hunyuan 3 (hy3)", provider: aihubmix, model: "hy3", input_usd_per_m: 0.1562, output_usd_per_m: 0.6248, origin: Chiny}
+  - {id: api_jev, label: "Jev (decyzyjny)", provider: aihubmix, model: "jev-latest", input_usd_per_m: 0.0462, output_usd_per_m: 0, origin: inne, note: "model decyzyjny; mierzony tylko jeśli działa przez chat/completions"}
+  - {id: api_ctrl_gpt41nano, label: "GPT-4.1 nano (kontrola)", provider: aihubmix, model: "gpt-4.1-nano", input_usd_per_m: 0.10, output_usd_per_m: 0.40, origin: USA, note: "kontrola: tokenizer publiczny = gpt4o (o200k)"}
+  # --- AIHubMix, darmowe ---
+  - {id: api_north_mini, label: "Cohere North Mini Code", provider: aihubmix, model: "north-mini-code-free", input_usd_per_m: 0, origin: inne}
+  - {id: api_kimi_k3, label: "Kimi K3 (coding)", provider: aihubmix, model: "coding-kimi-k3-free", input_usd_per_m: 0, origin: Chiny}
+  - {id: api_dots3, label: "dots.3 note (rednote)", provider: aihubmix, model: "dots-3-note-preview-free", input_usd_per_m: 0, origin: Chiny}
+  - {id: api_flint, label: "Flint v1.0", provider: aihubmix, model: "flint-v1.0-free", input_usd_per_m: 0, origin: inne}
+  - {id: api_xing4, label: "Xing 4.0 (Xingchen)", provider: aihubmix, model: "xing4.0-29b-a4b-free", input_usd_per_m: 0, origin: Chiny}
+  # Inkling (thinkingmachines/inkling:free) odrzucony: HTTP 403, dostępny tylko w aplikacjach agentowych OpenRouter.
+  # --- OpenRouter, tylko darmowe (limit 50 zapytań/dzień; 1 blok na język) ---
+  - {id: api_or_ctrl_lfm25, label: "LFM2.5 przez OpenRouter (kontrola)", provider: openrouter, model: "liquid/lfm-2.5-2.6b:free", input_usd_per_m: 0, origin: USA, note: "kontrola: tokenizer publiczny = lfm2_5 (Gemma 4 free: HTTP 429 u dostawcy)"}
+#  - {id: api_gemini_flash_lite, label: "Gemini Flash-Lite", provider: aihubmix, model: "gemini-2.5-flash-lite", input_usd_per_m: 0.10, origin: USA}
+#  - {id: api_nova_micro, label: "Amazon Nova Micro", provider: aihubmix, model: "amazon-nova-micro", input_usd_per_m: 0.035, origin: USA}
+#  - {id: api_grok_fast, label: "Grok (fast)", provider: aihubmix, model: "grok-4-fast", input_usd_per_m: 0.20, origin: USA}
+#  - {id: api_ctrl_qwen, label: "Qwen3 przez API (kontrola)", provider: aihubmix, model: "qwen3-32b", input_usd_per_m: 0.10, origin: Chiny, note: "kontrola: tokenizer publiczny = qwen3"}
+#  - {id: api_or_free_x, label: "...", provider: openrouter, model: "vendor/model:free", input_usd_per_m: 0, origin: ...}

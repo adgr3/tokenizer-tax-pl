@@ -1,0 +1,15 @@
+# Python 3.11+. GPU niepotrzebne (liczenie tokenów działa na CPU).
+transformers>=4.45
+tokenizers
+sentencepiece
+protobuf
+tiktoken
+blobfile
+huggingface_hub
+datasets
+pandas
+pyarrow
+matplotlib
+pyyaml
+requests
+scipy

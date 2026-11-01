@@ -1,0 +1,1 @@
+{"lang": "__baseline__", "block": 0, "error": "HTTP 400: {\"error\":{\"code\":\"no_available_channel\",\"message\":\"The model gemini-pro cannot be served at the moment. Check the model ID at https://aihubmix.com/models, try again later, or contact support with the request ID. (tid: 2026110118001066459179159962090)\",\"type\":\"Aihubmix_api_error\"}}"}

@@ -1,0 +1,78 @@
+{
+ "id": "qwen3",
+ "label": "Qwen3",
+ "registers": {
+  "dziennik_ustaw": {
+   "label": "Dziennik Ustaw",
+   "fertility": 2.894544546996074,
+   "se": 0.16831673409949902,
+   "n_blocks": 20
+  },
+  "eurlex": {
+   "label": "Prawo UE (EUR-Lex)",
+   "fertility": 3.076399269159815,
+   "se": 0.023000894579822066,
+   "n_blocks": 21
+  },
+  "wikipedia": {
+   "label": "Wikipedia",
+   "fertility": 2.824626580893593,
+   "se": 0.039204685598986905,
+   "n_blocks": 21
+  },
+  "wolne_lektury": {
+   "label": "Wolne Lektury",
+   "fertility": 2.4439476157591824,
+   "se": 0.018645230916035888,
+   "n_blocks": 24
+  },
+  "parliamentary": {
+   "label": "Stenogramy Sejmu",
+   "fertility": 2.5202075518234826,
+   "se": 0.02524808962585088,
+   "n_blocks": 23
+  },
+  "sejm_committee_transcripts": {
+   "label": "Komisje sejmowe",
+   "fertility": 2.4666371831693352,
+   "se": 0.03593079736688542,
+   "n_blocks": 21
+  },
+  "wikinews": {
+   "label": "Wikinews (prasa)",
+   "fertility": 2.6959242884298957,
+   "se": 0.02741578087694395,
+   "n_blocks": 21
+  },
+  "global_voices": {
+   "label": "Global Voices (blogi)",
+   "fertility": 2.5612519617202194,
+   "se": 0.04318928676547,
+   "n_blocks": 23
+  },
+  "plwiki_talk": {
+   "label": "Dyskusje Wikipedii (forum)",
+   "fertility": 2.575224589475141,
+   "se": 0.0328465812528252,
+   "n_blocks": 22
+  },
+  "govpl": {
+   "label": "gov.pl (administracja)",
+   "fertility": 2.6328057748248446,
+   "se": 0.01629759442281301,
+   "n_blocks": 21
+  },
+  "ted_pl": {
+   "label": "Przetargi publiczne (TED)",
+   "fertility": 2.6631018564439253,
+   "se": 0.038074946135725186,
+   "n_blocks": 24
+  },
+  "biblioteka_nauki": {
+   "label": "Artykuły naukowe",
+   "fertility": 2.536882488929778,
+   "se": 0.04576518202190853,
+   "n_blocks": 20
+  }
+ }
+}

@@ -1,0 +1,180 @@
+{
+ "block_chars": 6000,
+ "languages": {
+  "eng_Latn": {
+   "blocks": 5,
+   "chars": 26798,
+   "words": 4387,
+   "min_block_chars": 3057,
+   "max_block_chars": 5980
+  },
+  "spa_Latn": {
+   "blocks": 6,
+   "chars": 31846,
+   "words": 5211,
+   "min_block_chars": 2287,
+   "max_block_chars": 5987
+  },
+  "fra_Latn": {
+   "blocks": 6,
+   "chars": 31895,
+   "words": 5147,
+   "min_block_chars": 2307,
+   "max_block_chars": 5959
+  },
+  "por_Latn": {
+   "blocks": 5,
+   "chars": 28798,
+   "words": 4695,
+   "min_block_chars": 4994,
+   "max_block_chars": 5994
+  },
+  "ita_Latn": {
+   "blocks": 6,
+   "chars": 31490,
+   "words": 4829,
+   "min_block_chars": 2138,
+   "max_block_chars": 5947
+  },
+  "nld_Latn": {
+   "blocks": 5,
+   "chars": 29977,
+   "words": 4634,
+   "min_block_chars": 5867,
+   "max_block_chars": 6291
+  },
+  "deu_Latn": {
+   "blocks": 6,
+   "chars": 31043,
+   "words": 4342,
+   "min_block_chars": 1432,
+   "max_block_chars": 5999
+  },
+  "dan_Latn": {
+   "blocks": 5,
+   "chars": 27365,
+   "words": 4285,
+   "min_block_chars": 3847,
+   "max_block_chars": 5932
+  },
+  "swe_Latn": {
+   "blocks": 5,
+   "chars": 26783,
+   "words": 4083,
+   "min_block_chars": 3185,
+   "max_block_chars": 5978
+  },
+  "ron_Latn": {
+   "blocks": 5,
+   "chars": 30122,
+   "words": 4771,
+   "min_block_chars": 5764,
+   "max_block_chars": 6579
+  },
+  "pol_Latn": {
+   "blocks": 5,
+   "chars": 28563,
+   "words": 3975,
+   "min_block_chars": 4929,
+   "max_block_chars": 5963
+  },
+  "gle_Latn": {
+   "blocks": 6,
+   "chars": 31115,
+   "words": 5194,
+   "min_block_chars": 1466,
+   "max_block_chars": 5979
+  },
+  "ces_Latn": {
+   "blocks": 5,
+   "chars": 25993,
+   "words": 3921,
+   "min_block_chars": 2189,
+   "max_block_chars": 5977
+  },
+  "slv_Latn": {
+   "blocks": 5,
+   "chars": 26762,
+   "words": 4031,
+   "min_block_chars": 3105,
+   "max_block_chars": 5996
+  },
+  "hrv_Latn": {
+   "blocks": 5,
+   "chars": 26532,
+   "words": 3945,
+   "min_block_chars": 2793,
+   "max_block_chars": 5996
+  },
+  "bul_Cyrl": {
+   "blocks": 5,
+   "chars": 28194,
+   "words": 4352,
+   "min_block_chars": 4635,
+   "max_block_chars": 5987
+  },
+  "slk_Latn": {
+   "blocks": 5,
+   "chars": 26787,
+   "words": 3939,
+   "min_block_chars": 3298,
+   "max_block_chars": 5933
+  },
+  "ukr_Cyrl": {
+   "blocks": 5,
+   "chars": 27693,
+   "words": 3902,
+   "min_block_chars": 4014,
+   "max_block_chars": 5986
+  },
+  "hun_Latn": {
+   "blocks": 5,
+   "chars": 28272,
+   "words": 3764,
+   "min_block_chars": 4597,
+   "max_block_chars": 5968
+  },
+  "est_Latn": {
+   "blocks": 5,
+   "chars": 26561,
+   "words": 3368,
+   "min_block_chars": 2936,
+   "max_block_chars": 5931
+  },
+  "lit_Latn": {
+   "blocks": 5,
+   "chars": 27128,
+   "words": 3582,
+   "min_block_chars": 3664,
+   "max_block_chars": 5927
+  },
+  "lvs_Latn": {
+   "blocks": 5,
+   "chars": 27461,
+   "words": 3744,
+   "min_block_chars": 3845,
+   "max_block_chars": 5976
+  },
+  "fin_Latn": {
+   "blocks": 5,
+   "chars": 28920,
+   "words": 3253,
+   "min_block_chars": 5380,
+   "max_block_chars": 5941
+  },
+  "ell_Grek": {
+   "blocks": 6,
+   "chars": 32037,
+   "words": 4807,
+   "min_block_chars": 2487,
+   "max_block_chars": 5981
+  },
+  "mlt_Latn": {
+   "blocks": 5,
+   "chars": 29658,
+   "words": 3844,
+   "min_block_chars": 5848,
+   "max_block_chars": 5987
+  }
+ }
+}

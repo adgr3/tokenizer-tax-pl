@@ -1,0 +1,7 @@
+{
+ "bielik_pl_11b_v3": {
+  "label": "Bielik-PL 11B v3",
+  "repo": "speakleash/Bielik-PL-11B-v3.0-Instruct",
+  "reason": "speakleash/Bielik-PL-11B-v3.0-Instruct: GatedRepoError: 401 Client Error. (Request ID: Root=1-6ae77794-02fa2b094e78f96b41629006;159ca591-622f-4502-9b4c-faba063fd080)\n\nCannot access gated repo for url https://huggingface.co/speakleash/Bielik-PL-11B-v3.0-Ins"
+ }
+}

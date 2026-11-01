@@ -1,0 +1,1244 @@
+{
+ "summary": {
+  "n": 150,
+  "mean_abs": 0.013843333333333332,
+  "max_abs": 0.0676,
+  "pass_mean": 0.02,
+  "pass_max": 0.08,
+  "per_tokenizer": {
+   "deepseek_v3": {
+    "n": 25,
+    "mean_abs": 0.006306462706382492,
+    "max_abs": 0.02450058048501913
+   },
+   "gemma2": {
+    "n": 25,
+    "mean_abs": 0.04804418979159702,
+    "max_abs": 0.06759360148960925
+   },
+   "gpt4o": {
+    "n": 25,
+    "mean_abs": 0.005788170885439498,
+    "max_abs": 0.0220231890382665
+   },
+   "llama33": {
+    "n": 25,
+    "mean_abs": 0.007718159270316276,
+    "max_abs": 0.029139938613093497
+   },
+   "llama4_maverick": {
+    "n": 25,
+    "mean_abs": 0.007229074591692166,
+    "max_abs": 0.028112452120872877
+   },
+   "qwen3": {
+    "n": 25,
+    "mean_abs": 0.00795234458981641,
+    "max_abs": 0.035204700833212144
+   }
+  },
+  "passed": true
+ },
+ "rows": [
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "bul_Cyrl",
+   "ours": 2.4897,
+   "ref": 2.488,
+   "diff": 0.0017
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "hrv_Latn",
+   "ours": 2.4905,
+   "ref": 2.476,
+   "diff": 0.0145
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "ces_Latn",
+   "ours": 2.347,
+   "ref": 2.345,
+   "diff": 0.002
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "dan_Latn",
+   "ours": 2.0026,
+   "ref": 2.0,
+   "diff": 0.0026
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "nld_Latn",
+   "ours": 1.7483,
+   "ref": 1.744,
+   "diff": 0.0043
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "eng_Latn",
+   "ours": 1.2193,
+   "ref": 1.218,
+   "diff": 0.0013
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "est_Latn",
+   "ours": 3.0125,
+   "ref": 3.009,
+   "diff": 0.0035
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "fin_Latn",
+   "ours": 3.158,
+   "ref": 3.146,
+   "diff": 0.012
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "fra_Latn",
+   "ours": 1.5948,
+   "ref": 1.594,
+   "diff": 0.0008
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "deu_Latn",
+   "ours": 1.8975,
+   "ref": 1.873,
+   "diff": 0.0245
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "ell_Grek",
+   "ours": 3.0474,
+   "ref": 3.044,
+   "diff": 0.0034
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "hun_Latn",
+   "ours": 2.8718,
+   "ref": 2.865,
+   "diff": 0.0068
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "gle_Latn",
+   "ours": 2.4226,
+   "ref": 2.436,
+   "diff": -0.0134
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "ita_Latn",
+   "ours": 1.7164,
+   "ref": 1.719,
+   "diff": -0.0026
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "lvs_Latn",
+   "ours": 3.2508,
+   "ref": 3.249,
+   "diff": 0.0018
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "lit_Latn",
+   "ours": 3.0372,
+   "ref": 3.024,
+   "diff": 0.0132
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "mlt_Latn",
+   "ours": 3.2729,
+   "ref": 3.268,
+   "diff": 0.0049
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "pol_Latn",
+   "ours": 2.3142,
+   "ref": 2.306,
+   "diff": 0.0082
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "por_Latn",
+   "ours": 1.6247,
+   "ref": 1.619,
+   "diff": 0.0057
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "slk_Latn",
+   "ours": 2.6287,
+   "ref": 2.622,
+   "diff": 0.0067
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "slv_Latn",
+   "ours": 2.4559,
+   "ref": 2.441,
+   "diff": 0.0149
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "spa_Latn",
+   "ours": 1.5541,
+   "ref": 1.547,
+   "diff": 0.0071
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "swe_Latn",
+   "ours": 2.0454,
+   "ref": 2.045,
+   "diff": 0.0004
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "ukr_Cyrl",
+   "ours": 3.0688,
+   "ref": 3.068,
+   "diff": 0.0008
+  },
+  {
+   "tokenizer": "deepseek_v3",
+   "model_ref": "DeepSeek V3",
+   "language": "ukr_Cyrl",
+   "ours": 3.0688,
+   "ref": 3.068,
+   "diff": 0.0008
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "bul_Cyrl",
+   "ours": 2.0944,
+   "ref": 2.047,
+   "diff": 0.0474
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "hrv_Latn",
+   "ours": 2.2903,
+   "ref": 2.236,
+   "diff": 0.0543
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "ces_Latn",
+   "ours": 2.1406,
+   "ref": 2.088,
+   "diff": 0.0526
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "dan_Latn",
+   "ours": 1.7752,
+   "ref": 1.732,
+   "diff": 0.0432
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "nld_Latn",
+   "ours": 1.6067,
+   "ref": 1.56,
+   "diff": 0.0467
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "eng_Latn",
+   "ours": 1.2727,
+   "ref": 1.232,
+   "diff": 0.0407
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "est_Latn",
+   "ours": 2.696,
+   "ref": 2.644,
+   "diff": 0.052
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "fin_Latn",
+   "ours": 2.7922,
+   "ref": 2.726,
+   "diff": 0.0662
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "fra_Latn",
+   "ours": 1.4368,
+   "ref": 1.402,
+   "diff": 0.0348
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "deu_Latn",
+   "ours": 1.6082,
+   "ref": 1.549,
+   "diff": 0.0592
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "ell_Grek",
+   "ours": 2.6331,
+   "ref": 2.597,
+   "diff": 0.0361
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "hun_Latn",
+   "ours": 2.4559,
+   "ref": 2.401,
+   "diff": 0.0549
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "gle_Latn",
+   "ours": 2.2845,
+   "ref": 2.26,
+   "diff": 0.0245
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "ita_Latn",
+   "ours": 1.5361,
+   "ref": 1.501,
+   "diff": 0.0351
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "lvs_Latn",
+   "ours": 2.7081,
+   "ref": 2.655,
+   "diff": 0.0531
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "lit_Latn",
+   "ours": 2.5906,
+   "ref": 2.523,
+   "diff": 0.0676
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "mlt_Latn",
+   "ours": 2.9417,
+   "ref": 2.886,
+   "diff": 0.0557
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "pol_Latn",
+   "ours": 2.0536,
+   "ref": 2.002,
+   "diff": 0.0516
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "por_Latn",
+   "ours": 1.4457,
+   "ref": 1.403,
+   "diff": 0.0427
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "slk_Latn",
+   "ours": 2.2462,
+   "ref": 2.196,
+   "diff": 0.0502
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "slv_Latn",
+   "ours": 2.1872,
+   "ref": 2.135,
+   "diff": 0.0522
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "spa_Latn",
+   "ours": 1.3444,
+   "ref": 1.307,
+   "diff": 0.0374
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "swe_Latn",
+   "ours": 1.7871,
+   "ref": 1.739,
+   "diff": 0.0481
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "ukr_Cyrl",
+   "ours": 2.3965,
+   "ref": 2.349,
+   "diff": 0.0475
+  },
+  {
+   "tokenizer": "gemma2",
+   "model_ref": "Gemma 2 27B",
+   "language": "ukr_Cyrl",
+   "ours": 2.3965,
+   "ref": 2.349,
+   "diff": 0.0475
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "bul_Cyrl",
+   "ours": 2.1477,
+   "ref": 2.14,
+   "diff": 0.0077
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "hrv_Latn",
+   "ours": 2.0248,
+   "ref": 2.013,
+   "diff": 0.0118
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "ces_Latn",
+   "ours": 2.1984,
+   "ref": 2.194,
+   "diff": 0.0044
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "dan_Latn",
+   "ours": 1.72,
+   "ref": 1.72,
+   "diff": -0.0
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "nld_Latn",
+   "ours": 1.4438,
+   "ref": 1.438,
+   "diff": 0.0058
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "eng_Latn",
+   "ours": 1.2119,
+   "ref": 1.213,
+   "diff": -0.0011
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "est_Latn",
+   "ours": 2.4032,
+   "ref": 2.402,
+   "diff": 0.0012
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "fin_Latn",
+   "ours": 2.6217,
+   "ref": 2.611,
+   "diff": 0.0107
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "fra_Latn",
+   "ours": 1.3941,
+   "ref": 1.396,
+   "diff": -0.0019
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "deu_Latn",
+   "ours": 1.609,
+   "ref": 1.587,
+   "diff": 0.022
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "ell_Grek",
+   "ours": 2.3825,
+   "ref": 2.383,
+   "diff": -0.0005
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "hun_Latn",
+   "ours": 2.5618,
+   "ref": 2.557,
+   "diff": 0.0048
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "gle_Latn",
+   "ours": 1.9283,
+   "ref": 1.928,
+   "diff": 0.0003
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "ita_Latn",
+   "ours": 1.6205,
+   "ref": 1.625,
+   "diff": -0.0045
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "lvs_Latn",
+   "ours": 2.6221,
+   "ref": 2.616,
+   "diff": 0.0061
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "lit_Latn",
+   "ours": 2.5837,
+   "ref": 2.573,
+   "diff": 0.0107
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "mlt_Latn",
+   "ours": 2.6186,
+   "ref": 2.612,
+   "diff": 0.0066
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "pol_Latn",
+   "ours": 2.2268,
+   "ref": 2.219,
+   "diff": 0.0078
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "por_Latn",
+   "ours": 1.3786,
+   "ref": 1.375,
+   "diff": 0.0036
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "slk_Latn",
+   "ours": 2.2902,
+   "ref": 2.285,
+   "diff": 0.0052
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "slv_Latn",
+   "ours": 2.0277,
+   "ref": 2.019,
+   "diff": 0.0087
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "spa_Latn",
+   "ours": 1.3419,
+   "ref": 1.339,
+   "diff": 0.0029
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "swe_Latn",
+   "ours": 1.7766,
+   "ref": 1.774,
+   "diff": 0.0026
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "ukr_Cyrl",
+   "ours": 2.4579,
+   "ref": 2.451,
+   "diff": 0.0069
+  },
+  {
+   "tokenizer": "gpt4o",
+   "model_ref": "GPT-4o",
+   "language": "ukr_Cyrl",
+   "ours": 2.4579,
+   "ref": 2.451,
+   "diff": 0.0069
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "bul_Cyrl",
+   "ours": 2.5796,
+   "ref": 2.572,
+   "diff": 0.0076
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "hrv_Latn",
+   "ours": 2.4739,
+   "ref": 2.458,
+   "diff": 0.0159
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "ces_Latn",
+   "ours": 2.0962,
+   "ref": 2.09,
+   "diff": 0.0062
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "dan_Latn",
+   "ours": 2.0015,
+   "ref": 1.998,
+   "diff": 0.0035
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "nld_Latn",
+   "ours": 1.8708,
+   "ref": 1.864,
+   "diff": 0.0068
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "eng_Latn",
+   "ours": 1.2242,
+   "ref": 1.223,
+   "diff": 0.0012
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "est_Latn",
+   "ours": 3.0218,
+   "ref": 3.021,
+   "diff": 0.0008
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "fin_Latn",
+   "ours": 3.3741,
+   "ref": 3.361,
+   "diff": 0.0131
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "fra_Latn",
+   "ours": 1.652,
+   "ref": 1.655,
+   "diff": -0.003
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "deu_Latn",
+   "ours": 1.9961,
+   "ref": 1.967,
+   "diff": 0.0291
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "ell_Grek",
+   "ours": 2.5291,
+   "ref": 2.524,
+   "diff": 0.0051
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "hun_Latn",
+   "ours": 3.0828,
+   "ref": 3.073,
+   "diff": 0.0098
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "gle_Latn",
+   "ours": 2.4024,
+   "ref": 2.414,
+   "diff": -0.0116
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "ita_Latn",
+   "ours": 1.8282,
+   "ref": 1.835,
+   "diff": -0.0068
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "lvs_Latn",
+   "ours": 3.3896,
+   "ref": 3.389,
+   "diff": 0.0006
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "lit_Latn",
+   "ours": 3.3408,
+   "ref": 3.328,
+   "diff": 0.0128
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "mlt_Latn",
+   "ours": 3.3951,
+   "ref": 3.393,
+   "diff": 0.0021
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "pol_Latn",
+   "ours": 2.6074,
+   "ref": 2.6,
+   "diff": 0.0074
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "por_Latn",
+   "ours": 1.6942,
+   "ref": 1.692,
+   "diff": 0.0022
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "slk_Latn",
+   "ours": 2.5525,
+   "ref": 2.545,
+   "diff": 0.0075
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "slv_Latn",
+   "ours": 2.4534,
+   "ref": 2.44,
+   "diff": 0.0134
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "spa_Latn",
+   "ours": 1.6015,
+   "ref": 1.597,
+   "diff": 0.0045
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "swe_Latn",
+   "ours": 2.0695,
+   "ref": 2.067,
+   "diff": 0.0025
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "ukr_Cyrl",
+   "ours": 2.3267,
+   "ref": 2.317,
+   "diff": 0.0097
+  },
+  {
+   "tokenizer": "llama33",
+   "model_ref": "Llama 3.3 70B",
+   "language": "ukr_Cyrl",
+   "ours": 2.3267,
+   "ref": 2.317,
+   "diff": 0.0097
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "bul_Cyrl",
+   "ours": 1.8736,
+   "ref": 1.864,
+   "diff": 0.0096
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "hrv_Latn",
+   "ours": 2.1241,
+   "ref": 2.116,
+   "diff": 0.0081
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "ces_Latn",
+   "ours": 2.0411,
+   "ref": 2.033,
+   "diff": 0.0081
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "dan_Latn",
+   "ours": 1.763,
+   "ref": 1.76,
+   "diff": 0.003
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "nld_Latn",
+   "ours": 1.5564,
+   "ref": 1.551,
+   "diff": 0.0054
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "eng_Latn",
+   "ours": 1.2153,
+   "ref": 1.217,
+   "diff": -0.0017
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "est_Latn",
+   "ours": 2.5383,
+   "ref": 2.537,
+   "diff": 0.0013
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "fin_Latn",
+   "ours": 2.7049,
+   "ref": 2.69,
+   "diff": 0.0149
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "fra_Latn",
+   "ours": 1.4032,
+   "ref": 1.402,
+   "diff": 0.0012
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "deu_Latn",
+   "ours": 1.6061,
+   "ref": 1.578,
+   "diff": 0.0281
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "ell_Grek",
+   "ours": 2.2946,
+   "ref": 2.292,
+   "diff": 0.0026
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "hun_Latn",
+   "ours": 2.2207,
+   "ref": 2.214,
+   "diff": 0.0067
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "gle_Latn",
+   "ours": 2.143,
+   "ref": 2.147,
+   "diff": -0.004
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "ita_Latn",
+   "ours": 1.492,
+   "ref": 1.491,
+   "diff": 0.001
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "lvs_Latn",
+   "ours": 2.5266,
+   "ref": 2.518,
+   "diff": 0.0086
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "lit_Latn",
+   "ours": 2.5007,
+   "ref": 2.483,
+   "diff": 0.0177
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "mlt_Latn",
+   "ours": 3.2233,
+   "ref": 3.22,
+   "diff": 0.0033
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "pol_Latn",
+   "ours": 1.8939,
+   "ref": 1.879,
+   "diff": 0.0149
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "por_Latn",
+   "ours": 1.3836,
+   "ref": 1.379,
+   "diff": 0.0046
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "slk_Latn",
+   "ours": 2.1424,
+   "ref": 2.134,
+   "diff": 0.0084
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "slv_Latn",
+   "ours": 2.112,
+   "ref": 2.103,
+   "diff": 0.009
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "spa_Latn",
+   "ours": 1.3329,
+   "ref": 1.329,
+   "diff": 0.0039
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "swe_Latn",
+   "ours": 1.7413,
+   "ref": 1.738,
+   "diff": 0.0033
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "ukr_Cyrl",
+   "ours": 2.1637,
+   "ref": 2.158,
+   "diff": 0.0057
+  },
+  {
+   "tokenizer": "llama4_maverick",
+   "model_ref": "Llama 4 Maverick",
+   "language": "ukr_Cyrl",
+   "ours": 2.1637,
+   "ref": 2.158,
+   "diff": 0.0057
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "bul_Cyrl",
+   "ours": 2.8449,
+   "ref": 2.842,
+   "diff": 0.0029
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "hrv_Latn",
+   "ours": 2.5955,
+   "ref": 2.582,
+   "diff": 0.0135
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "ces_Latn",
+   "ours": 2.9342,
+   "ref": 2.926,
+   "diff": 0.0082
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "dan_Latn",
+   "ours": 2.0412,
+   "ref": 2.038,
+   "diff": 0.0032
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "nld_Latn",
+   "ours": 1.899,
+   "ref": 1.892,
+   "diff": 0.007
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "eng_Latn",
+   "ours": 1.2501,
+   "ref": 1.251,
+   "diff": -0.0009
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "est_Latn",
+   "ours": 3.0739,
+   "ref": 3.075,
+   "diff": -0.0011
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "fin_Latn",
+   "ours": 3.4257,
+   "ref": 3.413,
+   "diff": 0.0127
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "fra_Latn",
+   "ours": 1.6611,
+   "ref": 1.665,
+   "diff": -0.0039
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "deu_Latn",
+   "ours": 2.0083,
+   "ref": 1.98,
+   "diff": 0.0283
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "ell_Grek",
+   "ours": 5.6918,
+   "ref": 5.727,
+   "diff": -0.0352
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "hun_Latn",
+   "ours": 3.1522,
+   "ref": 3.143,
+   "diff": 0.0092
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "gle_Latn",
+   "ours": 2.4585,
+   "ref": 2.472,
+   "diff": -0.0135
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "ita_Latn",
+   "ours": 1.8524,
+   "ref": 1.861,
+   "diff": -0.0086
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "lvs_Latn",
+   "ours": 3.4181,
+   "ref": 3.42,
+   "diff": -0.0019
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "lit_Latn",
+   "ours": 3.2366,
+   "ref": 3.228,
+   "diff": 0.0086
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "mlt_Latn",
+   "ours": 3.2388,
+   "ref": 3.236,
+   "diff": 0.0028
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "pol_Latn",
+   "ours": 2.4836,
+   "ref": 2.472,
+   "diff": 0.0116
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "por_Latn",
+   "ours": 1.7029,
+   "ref": 1.699,
+   "diff": 0.0039
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "slk_Latn",
+   "ours": 2.9362,
+   "ref": 2.93,
+   "diff": 0.0062
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "slv_Latn",
+   "ours": 2.5778,
+   "ref": 2.567,
+   "diff": 0.0108
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "spa_Latn",
+   "ours": 1.6143,
+   "ref": 1.611,
+   "diff": 0.0033
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "swe_Latn",
+   "ours": 2.1076,
+   "ref": 2.108,
+   "diff": -0.0004
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "ukr_Cyrl",
+   "ours": 3.6164,
+   "ref": 3.617,
+   "diff": -0.0006
+  },
+  {
+   "tokenizer": "qwen3",
+   "model_ref": "Qwen3 32B",
+   "language": "ukr_Cyrl",
+   "ours": 3.6164,
+   "ref": 3.617,
+   "diff": -0.0006
+  }
+ ]
+}

@@ -1,0 +1,268 @@
+{
+ "n_tokenizers_measured": 69,
+ "n_unique_llm": 51,
+ "n_local": 63,
+ "n_api": 6,
+ "n_encoders": 4,
+ "aliases": {
+  "bielik_1_5b_v3": "bielik_4_5b_v3",
+  "bielik_minitron_7b": "bielik_11b_v3",
+  "gollem_v6": "slayer1b",
+  "apertus": "pllum_12b",
+  "mistral_nemo": "pllum_12b",
+  "llama2": "qra_1b",
+  "smollm3": "llama33",
+  "nemotron": "pllum_12b",
+  "mistral_large3": "pllum_12b",
+  "nemotron_super3": "pllum_12b",
+  "gpt_oss": "gpt4o",
+  "granite4": "phi4",
+  "olmo3": "olmo2",
+  "api_ctrl_gpt41nano": "gpt4o"
+ },
+ "skipped": {
+  "bielik_pl_11b_v3": "speakleash/Bielik-PL-11B-v3.0-Instruct: GatedRepoError: 401 Client Error. (Request ID: Root=1-6ae77794-02fa2b094e78f96b41629006;159ca591-622f-4502-9b4c-faba063f"
+ },
+ "calibration": {
+  "n": 150,
+  "mean_abs": 0.013843333333333332,
+  "max_abs": 0.0676,
+  "pass_mean": 0.02,
+  "pass_max": 0.08,
+  "per_tokenizer": {
+   "deepseek_v3": {
+    "n": 25,
+    "mean_abs": 0.006306462706382492,
+    "max_abs": 0.02450058048501913
+   },
+   "gemma2": {
+    "n": 25,
+    "mean_abs": 0.04804418979159702,
+    "max_abs": 0.06759360148960925
+   },
+   "gpt4o": {
+    "n": 25,
+    "mean_abs": 0.005788170885439498,
+    "max_abs": 0.0220231890382665
+   },
+   "llama33": {
+    "n": 25,
+    "mean_abs": 0.007718159270316276,
+    "max_abs": 0.029139938613093497
+   },
+   "llama4_maverick": {
+    "n": 25,
+    "mean_abs": 0.007229074591692166,
+    "max_abs": 0.028112452120872877
+   },
+   "qwen3": {
+    "n": 25,
+    "mean_abs": 0.00795234458981641,
+    "max_abs": 0.035204700833212144
+   }
+  },
+  "passed": true
+ },
+ "api_spend": {
+  "aihubmix_usd": 0.2919447186319997,
+  "openrouter_requests": {}
+ },
+ "polish": {
+  "mean": 2.447,
+  "rank_of_25": 11,
+  "tax_vs_en": 1.718,
+  "min": 1.461,
+  "min_tokenizer": "polish_gpt2",
+  "max": 4.398,
+  "max_tokenizer": "sl_konrad_456",
+  "spearman_with_other_languages_mean": 0.229,
+  "most_similar_language_ranking": "slv_Latn",
+  "least_similar_language_ranking": "eng_Latn"
+ },
+ "languages_best": [
+  {
+   "language_pl": "angielski",
+   "mean": 1.579
+  },
+  {
+   "language_pl": "hiszpański",
+   "mean": 1.858
+  },
+  {
+   "language_pl": "francuski",
+   "mean": 1.96
+  }
+ ],
+ "languages_worst": [
+  {
+   "language_pl": "bułgarski",
+   "mean": 4.042
+  },
+  {
+   "language_pl": "ukraiński",
+   "mean": 4.678
+  },
+  {
+   "language_pl": "grecki",
+   "mean": 5.529
+  }
+ ],
+ "families": {
+  "romańskie": 2.037,
+  "germańskie": 2.129,
+  "celtyckie": 2.626,
+  "słowiańskie": 3.173,
+  "ugrofińskie": 3.36,
+  "bałtyckie": 3.371,
+  "semickie": 3.559,
+  "grecki": 5.529
+ },
+ "scripts": {
+  "łaciński": 2.606,
+  "cyrylica": 4.36,
+  "grecki": 5.529
+ },
+ "tokenizers_best_pl": [
+  {
+   "label": "polish-gpt2",
+   "pl": 1.461,
+   "pl_vs_en": 0.679
+  },
+  {
+   "label": "APT3 1B (Azurro)",
+   "pl": 1.513,
+   "pl_vs_en": 0.745
+  },
+  {
+   "label": "SlayerLab Polish BPE 32k",
+   "pl": 1.574,
+   "pl_vs_en": 0.672
+  },
+  {
+   "label": "Teuken",
+   "pl": 1.615,
+   "pl_vs_en": 1.218
+  },
+  {
+   "label": "GoLLeM (dynaword-32k)",
+   "pl": 1.622,
+   "pl_vs_en": 0.696
+  }
+ ],
+ "tokenizers_worst_pl": [
+  {
+   "label": "AI21 Jamba2",
+   "pl": 3.338,
+   "pl_vs_en": 2.54
+  },
+  {
+   "label": "Claude Haiku 5.5",
+   "pl": 3.459,
+   "pl_vs_en": 1.774
+  },
+  {
+   "label": "GPT-2",
+   "pl": 3.727,
+   "pl_vs_en": 2.946
+  },
+  {
+   "label": "Slayer149",
+   "pl": 3.838,
+   "pl_vs_en": 2.63
+  },
+  {
+   "label": "Konrad 456",
+   "pl": 4.398,
+   "pl_vs_en": 0.934
+  }
+ ],
+ "origin": {
+  "UE": {
+   "n": 3,
+   "pl": 1.748,
+   "pl_vs_en": 1.285
+  },
+  "Polska": {
+   "n": 19,
+   "pl": 2.363,
+   "pl_vs_en": 1.342
+  },
+  "Chiny": {
+   "n": 8,
+   "pl": 2.492,
+   "pl_vs_en": 2.012
+  },
+  "USA": {
+   "n": 17,
+   "pl": 2.535,
+   "pl_vs_en": 1.952
+  },
+  "inne": {
+   "n": 4,
+   "pl": 2.913,
+   "pl_vs_en": 2.249
+  }
+ },
+ "vocab": {
+  "> 210 tys.": {
+   "n": 8,
+   "pl": 1.977,
+   "pl_vs_en": 1.528
+  },
+  "160–210 tys.": {
+   "n": 4,
+   "pl": 2.404,
+   "pl_vs_en": 1.984
+  },
+  "nieznany (API)": {
+   "n": 5,
+   "pl": 2.518,
+   "pl_vs_en": 1.824
+  },
+  "≤ 64 tys.": {
+   "n": 19,
+   "pl": 2.523,
+   "pl_vs_en": 1.441
+  },
+  "64–160 tys.": {
+   "n": 15,
+   "pl": 2.591,
+   "pl_vs_en": 2.065
+  }
+ },
+ "vocab_vs_pl_spearman": -0.182,
+ "vocab_vs_en_spearman": -0.661,
+ "mean_rank_correlation_between_languages": 0.852,
+ "polish_registers": {
+  "n_tokenizers": 51,
+  "spearman_vs_sib": {
+   "Artykuły naukowe": 0.96,
+   "Dyskusje Wikipedii (forum)": 0.991,
+   "Dziennik Ustaw": 0.959,
+   "Global Voices (blogi)": 0.972,
+   "Komisje sejmowe": 0.99,
+   "Prawo UE (EUR-Lex)": 0.885,
+   "Przetargi publiczne (TED)": 0.993,
+   "Stenogramy Sejmu": 0.991,
+   "Wikinews (prasa)": 0.994,
+   "Wikipedia": 0.991,
+   "Wolne Lektury": 0.982,
+   "gov.pl (administracja)": 0.998
+  },
+  "register_means": {
+   "Artykuły naukowe": 2.56,
+   "Dyskusje Wikipedii (forum)": 2.542,
+   "Dziennik Ustaw": 2.742,
+   "Global Voices (blogi)": 2.594,
+   "Komisje sejmowe": 2.403,
+   "Prawo UE (EUR-Lex)": 2.847,
+   "Przetargi publiczne (TED)": 2.597,
+   "Stenogramy Sejmu": 2.444,
+   "Wikinews (prasa)": 2.578,
+   "Wikipedia": 2.74,
+   "Wolne Lektury": 2.427,
+   "gov.pl (administracja)": 2.52,
+   "SIB-200 (wiadomości)": 2.42
+  }
+ }
+}

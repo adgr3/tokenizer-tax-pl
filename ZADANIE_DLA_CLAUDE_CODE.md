@@ -101,7 +101,7 @@ trafi do raportu z powodem.
 ```
 python -m tt.analyze
 python -m tt.charts
-python -m tt.report --author "ArtSmol" --hf adegier/tokenizer-fertility-pl --gh adgr3/tokenizer-tax-pl
+python -m tt.report --author "adgr3" --hf adegier/tokenizer-fertility-pl --gh adgr3/tokenizer-tax-pl
 ```
 
 ## Krok 9 — kontrola

@@ -1,0 +1,81 @@
+tokenizer,label,number,n_tokens,tokens
+aster,Aster-0.5B (OrisTeam),7,1,7
+aster,Aster-0.5B (OrisTeam),42,1,42
+aster,Aster-0.5B (OrisTeam),2026,2,20 · 26
+aster,Aster-0.5B (OrisTeam),12345678,4,123 · 45 · 6 · 78
+aster,Aster-0.5B (OrisTeam),3.14159,4,3 · . · 14 · 159
+aster,Aster-0.5B (OrisTeam),1 000 000,3,1 · ␣000 · ␣000
+aster,Aster-0.5B (OrisTeam),"1,000,000",5,"1 · , · 000 · , · 000"
+aster,Aster-0.5B (OrisTeam),2026-11-01,6,20 · 26 · - · 11 · - · 01
+aster,Aster-0.5B (OrisTeam),-17,2,- · 17
+aster,Aster-0.5B (OrisTeam),0.5,3,0 · . · 5
+bielik_1_5b_v3,Bielik 1.5B v3,7,2,␣ · 7
+bielik_1_5b_v3,Bielik 1.5B v3,42,3,␣ · 4 · 2
+bielik_1_5b_v3,Bielik 1.5B v3,2026,5,␣ · 2 · 0 · 2 · 6
+bielik_1_5b_v3,Bielik 1.5B v3,12345678,9,␣ · 1 · 2 · 3 · 4 · 5 · 6 · 7 · 8
+bielik_1_5b_v3,Bielik 1.5B v3,3.14159,8,␣ · 3 · . · 1 · 4 · 1 · 5 · 9
+bielik_1_5b_v3,Bielik 1.5B v3,1 000 000,10,␣ · 1 · ␣ · 0 · 0 · 0 · ␣ · 0 · 0 · 0
+bielik_1_5b_v3,Bielik 1.5B v3,"1,000,000",10,"␣ · 1 · , · 0 · 0 · 0 · , · 0 · 0 · 0"
+bielik_1_5b_v3,Bielik 1.5B v3,2026-11-01,11,␣ · 2 · 0 · 2 · 6 · - · 1 · 1 · - · 0 · 1
+bielik_1_5b_v3,Bielik 1.5B v3,-17,3,␣- · 1 · 7
+bielik_1_5b_v3,Bielik 1.5B v3,0.5,4,␣ · 0 · . · 5
+eurollm,EuroLLM,7,2,␣ · 7
+eurollm,EuroLLM,42,3,␣ · 4 · 2
+eurollm,EuroLLM,2026,5,␣ · 2 · 0 · 2 · 6
+eurollm,EuroLLM,12345678,9,␣ · 1 · 2 · 3 · 4 · 5 · 6 · 7 · 8
+eurollm,EuroLLM,3.14159,8,␣ · 3 · . · 1 · 4 · 1 · 5 · 9
+eurollm,EuroLLM,1 000 000,10,␣ · 1 · ␣ · 0 · 0 · 0 · ␣ · 0 · 0 · 0
+eurollm,EuroLLM,"1,000,000",10,"␣ · 1 · , · 0 · 0 · 0 · , · 0 · 0 · 0"
+eurollm,EuroLLM,2026-11-01,11,␣ · 2 · 0 · 2 · 6 · - · 1 · 1 · - · 0 · 1
+eurollm,EuroLLM,-17,3,␣- · 1 · 7
+eurollm,EuroLLM,0.5,4,␣ · 0 · . · 5
+lfm2_5,LFM2.5,7,1,7
+lfm2_5,LFM2.5,42,1,42
+lfm2_5,LFM2.5,2026,2,202 · 6
+lfm2_5,LFM2.5,12345678,3,123 · 456 · 78
+lfm2_5,LFM2.5,3.14159,4,3 · . · 141 · 59
+lfm2_5,LFM2.5,1 000 000,5,1 · ␣ · 000 · ␣ · 000
+lfm2_5,LFM2.5,"1,000,000",5,"1 · , · 000 · , · 000"
+lfm2_5,LFM2.5,2026-11-01,6,202 · 6 · - · 11 · - · 01
+lfm2_5,LFM2.5,-17,2,- · 17
+lfm2_5,LFM2.5,0.5,3,0 · . · 5
+lfm3,LFM3,7,1,7
+lfm3,LFM3,42,1,42
+lfm3,LFM3,2026,2,202 · 6
+lfm3,LFM3,12345678,3,123 · 456 · 78
+lfm3,LFM3,3.14159,4,3 · . · 141 · 59
+lfm3,LFM3,1 000 000,5,1 · ␣ · 000 · ␣ · 000
+lfm3,LFM3,"1,000,000",5,"1 · , · 000 · , · 000"
+lfm3,LFM3,2026-11-01,6,202 · 6 · - · 11 · - · 01
+lfm3,LFM3,-17,2,- · 17
+lfm3,LFM3,0.5,3,0 · . · 5
+pythia,Pythia (GPT-NeoX),7,1,7
+pythia,Pythia (GPT-NeoX),42,1,42
+pythia,Pythia (GPT-NeoX),2026,2,20 · 26
+pythia,Pythia (GPT-NeoX),12345678,2,12345 · 678
+pythia,Pythia (GPT-NeoX),3.14159,4,3 · . · 14 · 159
+pythia,Pythia (GPT-NeoX),1 000 000,3,1 · ␣000 · ␣000
+pythia,Pythia (GPT-NeoX),"1,000,000",5,"1 · , · 000 · , · 000"
+pythia,Pythia (GPT-NeoX),2026-11-01,6,20 · 26 · - · 11 · - · 01
+pythia,Pythia (GPT-NeoX),-17,2,- · 17
+pythia,Pythia (GPT-NeoX),0.5,3,0 · . · 5
+qwen3_5,Qwen3.5,7,1,7
+qwen3_5,Qwen3.5,42,2,4 · 2
+qwen3_5,Qwen3.5,2026,4,2 · 0 · 2 · 6
+qwen3_5,Qwen3.5,12345678,8,1 · 2 · 3 · 4 · 5 · 6 · 7 · 8
+qwen3_5,Qwen3.5,3.14159,7,3 · . · 1 · 4 · 1 · 5 · 9
+qwen3_5,Qwen3.5,1 000 000,9,1 · ␣ · 0 · 0 · 0 · ␣ · 0 · 0 · 0
+qwen3_5,Qwen3.5,"1,000,000",9,"1 · , · 0 · 0 · 0 · , · 0 · 0 · 0"
+qwen3_5,Qwen3.5,2026-11-01,10,2 · 0 · 2 · 6 · - · 1 · 1 · - · 0 · 1
+qwen3_5,Qwen3.5,-17,3,- · 1 · 7
+qwen3_5,Qwen3.5,0.5,3,0 · . · 5
+slayer1b,Slayer1B,7,1,7
+slayer1b,Slayer1B,42,1,42
+slayer1b,Slayer1B,2026,2,20 · 26
+slayer1b,Slayer1B,12345678,4,123 · 45 · 67 · 8
+slayer1b,Slayer1B,3.14159,5,3 · . · 14 · 15 · 9
+slayer1b,Slayer1B,1 000 000,3,1 · ␣000 · ␣000
+slayer1b,Slayer1B,"1,000,000",5,"1 · , · 000 · , · 000"
+slayer1b,Slayer1B,2026-11-01,6,20 · 26 · - · 11 · - · 01
+slayer1b,Slayer1B,-17,2,- · 17
+slayer1b,Slayer1B,0.5,3,0 · . · 5

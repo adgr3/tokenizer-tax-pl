@@ -1,0 +1,145 @@
+kind,category,text,tokenizer,label,n_tokens,tokens
+dane osobowe,PESEL,44051401359,nergal,NERGAL (XLM-R),5,␣44 · 05 · 140 · 13 · 59
+dane osobowe,PESEL,44051401359,xlm_roberta,XLM-RoBERTa,5,␣44 · 05 · 140 · 13 · 59
+dane osobowe,PESEL,44051401359,herbert,HerBERT,6,44 · 05 · 14 · 0 · 13 · 59</w>
+dane osobowe,PESEL,44051401359,polish_roberta,Polish RoBERTa,5,44 · 051 · 40 · 13 · 59
+dane osobowe,PESEL,44051401359,gpt4o,GPT-4o (o200k),4,440 · 514 · 013 · 59
+dane osobowe,PESEL,44051401359,bielik_4_5b_v3,Bielik 4.5B v3,12,␣ · 4 · 4 · 0 · 5 · 1 · 4 · 0 · 1 · 3 · 5 · 9
+dane osobowe,PESEL,44051401359,slayer1b,Slayer1B,6,4 · 40 · 5 · 140 · 13 · 59
+dane osobowe,PESEL,44051401359,aster,Aster-0.5B (OrisTeam),6,4 · 40 · 5 · 140 · 13 · 59
+dane osobowe,telefon (spacje),601 234 567,nergal,NERGAL (XLM-R),5,␣ · 601 · ␣234 · ␣ · 567
+dane osobowe,telefon (spacje),601 234 567,xlm_roberta,XLM-RoBERTa,5,␣ · 601 · ␣234 · ␣ · 567
+dane osobowe,telefon (spacje),601 234 567,herbert,HerBERT,4,601</w> · 234</w> · 5 · 67</w>
+dane osobowe,telefon (spacje),601 234 567,polish_roberta,Polish RoBERTa,4,60 · 1 · ␣234 · ␣567
+dane osobowe,telefon (spacje),601 234 567,gpt4o,GPT-4o (o200k),5,601 · ␣ · 234 · ␣ · 567
+dane osobowe,telefon (spacje),601 234 567,bielik_4_5b_v3,Bielik 4.5B v3,12,␣ · 6 · 0 · 1 · ␣ · 2 · 3 · 4 · ␣ · 5 · 6 · 7
+dane osobowe,telefon (spacje),601 234 567,slayer1b,Slayer1B,6,60 · 1 · ␣23 · 4 · ␣5 · 67
+dane osobowe,telefon (spacje),601 234 567,aster,Aster-0.5B (OrisTeam),6,60 · 1 · ␣23 · 4 · ␣5 · 67
+dane osobowe,"telefon (ciągły, +48)",+48601234567,nergal,NERGAL (XLM-R),5,␣+ · 48 · 60 · 1234 · 567
+dane osobowe,"telefon (ciągły, +48)",+48601234567,xlm_roberta,XLM-RoBERTa,5,␣+ · 48 · 60 · 1234 · 567
+dane osobowe,"telefon (ciągły, +48)",+48601234567,herbert,HerBERT,7,+</w> · 48 · 60 · 12 · 34 · 5 · 67</w>
+dane osobowe,"telefon (ciągły, +48)",+48601234567,polish_roberta,Polish RoBERTa,6,+ · 48 · 60 · 1234 · 5 · 67
+dane osobowe,"telefon (ciągły, +48)",+48601234567,gpt4o,GPT-4o (o200k),5,+ · 486 · 012 · 345 · 67
+dane osobowe,"telefon (ciągły, +48)",+48601234567,bielik_4_5b_v3,Bielik 4.5B v3,12,␣+ · 4 · 8 · 6 · 0 · 1 · 2 · 3 · 4 · 5 · 6 · 7
+dane osobowe,"telefon (ciągły, +48)",+48601234567,slayer1b,Slayer1B,6,+ · 48 · 60 · 123 · 45 · 67
+dane osobowe,"telefon (ciągły, +48)",+48601234567,aster,Aster-0.5B (OrisTeam),6,+ · 48 · 60 · 123 · 45 · 67
+dane osobowe,telefon (kreski),tel. 601-234-567,nergal,NERGAL (XLM-R),7,␣tel · . · ␣60 · 1-2 · 34 · - · 567
+dane osobowe,telefon (kreski),tel. 601-234-567,xlm_roberta,XLM-RoBERTa,7,␣tel · . · ␣60 · 1-2 · 34 · - · 567
+dane osobowe,telefon (kreski),tel. 601-234-567,herbert,HerBERT,8,tel</w> · .</w> · 601</w> · -</w> · 234</w> · -</w> · 5 · 67</w>
+dane osobowe,telefon (kreski),tel. 601-234-567,polish_roberta,Polish RoBERTa,6,tel · . · ␣601 · -23 · 4-5 · 67
+dane osobowe,telefon (kreski),tel. 601-234-567,gpt4o,GPT-4o (o200k),8,tel · . · ␣ · 601 · - · 234 · - · 567
+dane osobowe,telefon (kreski),tel. 601-234-567,bielik_4_5b_v3,Bielik 4.5B v3,14,␣tel · . · ␣ · 6 · 0 · 1 · - · 2 · 3 · 4 · - · 5 · 6 · 7
+dane osobowe,telefon (kreski),tel. 601-234-567,slayer1b,Slayer1B,10,tel · . · ␣60 · 1 · - · 23 · 4 · - · 5 · 67
+dane osobowe,telefon (kreski),tel. 601-234-567,aster,Aster-0.5B (OrisTeam),10,tel · . · ␣60 · 1 · - · 23 · 4 · - · 5 · 67
+dane osobowe,e-mail,jan.kowalski@gmina.pl,nergal,NERGAL (XLM-R),10,␣jan · . · ko · wal · ski · @ · g · mina · . · pl
+dane osobowe,e-mail,jan.kowalski@gmina.pl,xlm_roberta,XLM-RoBERTa,10,␣jan · . · ko · wal · ski · @ · g · mina · . · pl
+dane osobowe,e-mail,jan.kowalski@gmina.pl,herbert,HerBERT,8,jan</w> · .</w> · kow · alski</w> · @</w> · gmina</w> · .</w> · pl</w>
+dane osobowe,e-mail,jan.kowalski@gmina.pl,polish_roberta,Polish RoBERTa,8,jan · . · kowa · lski · @ · gmina · . · pl
+dane osobowe,e-mail,jan.kowalski@gmina.pl,gpt4o,GPT-4o (o200k),8,jan · .k · ow · als · ki · @g · mina · .pl
+dane osobowe,e-mail,jan.kowalski@gmina.pl,bielik_4_5b_v3,Bielik 4.5B v3,9,␣ja · n · . · kowa · lski · @ · gmina · . · pl
+dane osobowe,e-mail,jan.kowalski@gmina.pl,slayer1b,Slayer1B,10,jan · . · kow · al · ski · @ · g · mina · . · pl
+dane osobowe,e-mail,jan.kowalski@gmina.pl,aster,Aster-0.5B (OrisTeam),9,jan · . · kowa · lski · @ · g · mina · . · pl
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,nergal,NERGAL (XLM-R),13,␣PL · 61 · ␣10 · 90 · ␣10 · 14 · ␣ · 0000 · ␣07 · 12 · ␣1981 · ␣28 · 74
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,xlm_roberta,XLM-RoBERTa,13,␣PL · 61 · ␣10 · 90 · ␣10 · 14 · ␣ · 0000 · ␣07 · 12 · ␣1981 · ␣28 · 74
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,herbert,HerBERT,12,PL · 61</w> · 10 · 90</w> · 10 · 14</w> · 0000</w> · 07 · 12</w> · 1981</w> · 28 · 74</w>
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,polish_roberta,Polish RoBERTa,13,PL · 61 · ␣10 · 90 · ␣10 · 14 · ␣ · 0000 · ␣07 · 12 · ␣1981 · ␣28 · 74
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,gpt4o,GPT-4o (o200k),20,PL · 61 · ␣ · 109 · 0 · ␣ · 101 · 4 · ␣ · 000 · 0 · ␣ · 071 · 2 · ␣ · 198 · 1 · ␣ · 287 · 4
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,bielik_4_5b_v3,Bielik 4.5B v3,33,␣PL · 6 · 1 · ␣ · 1 · 0 · 9 · 0 · ␣ · 1 · 0 · 1 · 4 · ␣ · 0 · 0 · 0 · 0 · ␣ · 0 · 7 · 1 · 2 · ␣ · 1 · 9 · 8 · 1 · ␣ · 2 · 8 · 7 · 4
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,slayer1b,Slayer1B,13,PL · 61 · ␣10 · 90 · ␣10 · 14 · ␣ · 0000 · ␣07 · 12 · ␣1981 · ␣28 · 74
+dane osobowe,IBAN,PL61 1090 1014 0000 0712 1981 2874,aster,Aster-0.5B (OrisTeam),13,PL · 61 · ␣10 · 90 · ␣10 · 14 · ␣ · 0000 · ␣07 · 12 · ␣1981 · ␣28 · 74
+dane osobowe,NIP,123-456-32-18,nergal,NERGAL (XLM-R),5,␣123 · - · 456 · -32 · -18
+dane osobowe,NIP,123-456-32-18,xlm_roberta,XLM-RoBERTa,5,␣123 · - · 456 · -32 · -18
+dane osobowe,NIP,123-456-32-18,herbert,HerBERT,8,123</w> · -</w> · 4 · 56</w> · -</w> · 32</w> · -</w> · 18</w>
+dane osobowe,NIP,123-456-32-18,polish_roberta,Polish RoBERTa,5,123 · - · 456 · -3 · 2-18
+dane osobowe,NIP,123-456-32-18,gpt4o,GPT-4o (o200k),7,123 · - · 456 · - · 32 · - · 18
+dane osobowe,NIP,123-456-32-18,bielik_4_5b_v3,Bielik 4.5B v3,14,␣ · 1 · 2 · 3 · - · 4 · 5 · 6 · - · 3 · 2 · - · 1 · 8
+dane osobowe,NIP,123-456-32-18,slayer1b,Slayer1B,8,123 · - · 45 · 6 · - · 32 · - · 18
+dane osobowe,NIP,123-456-32-18,aster,Aster-0.5B (OrisTeam),8,123 · - · 45 · 6 · - · 32 · - · 18
+dane osobowe,KRS,KRS 0000123456,nergal,NERGAL (XLM-R),6,␣K · RS · ␣ · 0000 · 1234 · 56
+dane osobowe,KRS,KRS 0000123456,xlm_roberta,XLM-RoBERTa,6,␣K · RS · ␣ · 0000 · 1234 · 56
+dane osobowe,KRS,KRS 0000123456,herbert,HerBERT,6,KR · S</w> · 0000 · 12 · 34 · 56</w>
+dane osobowe,KRS,KRS 0000123456,polish_roberta,Polish RoBERTa,5,K · RS · ␣00001 · 234 · 56
+dane osobowe,KRS,KRS 0000123456,gpt4o,GPT-4o (o200k),7,K · RS · ␣ · 000 · 012 · 345 · 6
+dane osobowe,KRS,KRS 0000123456,bielik_4_5b_v3,Bielik 4.5B v3,12,␣KRS · ␣ · 0 · 0 · 0 · 0 · 1 · 2 · 3 · 4 · 5 · 6
+dane osobowe,KRS,KRS 0000123456,slayer1b,Slayer1B,7,K · RS · ␣ · 0000 · 123 · 45 · 6
+dane osobowe,KRS,KRS 0000123456,aster,Aster-0.5B (OrisTeam),7,KR · S · ␣ · 0000 · 123 · 45 · 6
+dane osobowe,dowód osobisty,ABC123456,nergal,NERGAL (XLM-R),3,␣ABC · 1234 · 56
+dane osobowe,dowód osobisty,ABC123456,xlm_roberta,XLM-RoBERTa,3,␣ABC · 1234 · 56
+dane osobowe,dowód osobisty,ABC123456,herbert,HerBERT,5,AB · C · 12 · 34 · 56</w>
+dane osobowe,dowód osobisty,ABC123456,polish_roberta,Polish RoBERTa,4,A · BC · 1234 · 56
+dane osobowe,dowód osobisty,ABC123456,gpt4o,GPT-4o (o200k),3,ABC · 123 · 456
+dane osobowe,dowód osobisty,ABC123456,bielik_4_5b_v3,Bielik 4.5B v3,7,␣ABC · 1 · 2 · 3 · 4 · 5 · 6
+dane osobowe,dowód osobisty,ABC123456,slayer1b,Slayer1B,5,A · BC · 123 · 45 · 6
+dane osobowe,dowód osobisty,ABC123456,aster,Aster-0.5B (OrisTeam),5,A · BC · 123 · 45 · 6
+pułapka (nie PII),kod CPV,45233140-2,nergal,NERGAL (XLM-R),4,␣45 · 233 · 140 · -2
+pułapka (nie PII),kod CPV,45233140-2,xlm_roberta,XLM-RoBERTa,4,␣45 · 233 · 140 · -2
+pułapka (nie PII),kod CPV,45233140-2,herbert,HerBERT,6,45 · 23 · 3 · 140</w> · -</w> · 2</w>
+pułapka (nie PII),kod CPV,45233140-2,polish_roberta,Polish RoBERTa,4,45 · 233 · 140 · -2
+pułapka (nie PII),kod CPV,45233140-2,gpt4o,GPT-4o (o200k),5,452 · 331 · 40 · - · 2
+pułapka (nie PII),kod CPV,45233140-2,bielik_4_5b_v3,Bielik 4.5B v3,11,␣ · 4 · 5 · 2 · 3 · 3 · 1 · 4 · 0 · - · 2
+pułapka (nie PII),kod CPV,45233140-2,slayer1b,Slayer1B,6,45 · 23 · 3 · 140 · - · 2
+pułapka (nie PII),kod CPV,45233140-2,aster,Aster-0.5B (OrisTeam),6,45 · 23 · 3 · 140 · - · 2
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,nergal,NERGAL (XLM-R),9,␣20 · 26 · / · B · ZP · ␣00 · 1234 · 56 · /01
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,xlm_roberta,XLM-RoBERTa,9,␣20 · 26 · / · B · ZP · ␣00 · 1234 · 56 · /01
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,herbert,HerBERT,12,20 · 26</w> · /</w> · B · Z · P</w> · 00 · 12 · 34 · 56</w> · /</w> · 01</w>
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,polish_roberta,Polish RoBERTa,9,20 · 26 · / · B · ZP · ␣00 · 1234 · 56 · /01
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,gpt4o,GPT-4o (o200k),11,202 · 6 · /B · Z · P · ␣ · 001 · 234 · 56 · / · 01
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,bielik_4_5b_v3,Bielik 4.5B v3,20,␣ · 2 · 0 · 2 · 6 · / · B · ZP · ␣ · 0 · 0 · 1 · 2 · 3 · 4 · 5 · 6 · / · 0 · 1
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,slayer1b,Slayer1B,12,20 · 26 · / · B · Z · P · ␣00 · 123 · 45 · 6 · / · 01
+pułapka (nie PII),nr ogłoszenia BZP,2026/BZP 00123456/01,aster,Aster-0.5B (OrisTeam),12,20 · 26 · / · B · Z · P · ␣00 · 123 · 45 · 6 · / · 01
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,nergal,NERGAL (XLM-R),8,␣ · ZP · . · 27 · 1 · .12. · 20 · 26
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,xlm_roberta,XLM-RoBERTa,8,␣ · ZP · . · 27 · 1 · .12. · 20 · 26
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,herbert,HerBERT,9,Z · P</w> · .</w> · 271</w> · .</w> · 12</w> · .</w> · 20 · 26</w>
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,polish_roberta,Polish RoBERTa,7,ZP · . · 271 · . · 12. · 20 · 26
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,gpt4o,GPT-4o (o200k),9,Z · P · . · 271 · . · 12 · . · 202 · 6
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,bielik_4_5b_v3,Bielik 4.5B v3,14,␣Z · P · . · 2 · 7 · 1 · . · 1 · 2 · . · 2 · 0 · 2 · 6
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,slayer1b,Slayer1B,10,Z · P · . · 27 · 1 · . · 12 · . · 20 · 26
+pułapka (nie PII),znak sprawy,ZP.271.12.2026,aster,Aster-0.5B (OrisTeam),10,Z · P · . · 27 · 1 · . · 12 · . · 20 · 26
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,nergal,NERGAL (XLM-R),6,␣K · IO · ␣ · 1234 · / · 26
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,xlm_roberta,XLM-RoBERTa,6,␣K · IO · ␣ · 1234 · / · 26
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,herbert,HerBERT,6,KI · O</w> · 12 · 34</w> · /</w> · 26</w>
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,polish_roberta,Polish RoBERTa,5,KI · O · ␣ · 1234 · /26
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,gpt4o,GPT-4o (o200k),7,K · IO · ␣ · 123 · 4 · / · 26
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,bielik_4_5b_v3,Bielik 4.5B v3,10,␣K · IO · ␣ · 1 · 2 · 3 · 4 · / · 2 · 6
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,slayer1b,Slayer1B,6,K · IO · ␣12 · 34 · / · 26
+pułapka (nie PII),sygnatura KIO,KIO 1234/26,aster,Aster-0.5B (OrisTeam),6,KI · O · ␣12 · 34 · / · 26
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,nergal,NERGAL (XLM-R),13,␣Dz · . · ␣U · . · ␣z · ␣20 · 24 · ␣r · . · ␣poz · . · ␣13 · 20
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,xlm_roberta,XLM-RoBERTa,13,␣Dz · . · ␣U · . · ␣z · ␣20 · 24 · ␣r · . · ␣poz · . · ␣13 · 20
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,herbert,HerBERT,13,Dz</w> · .</w> · U</w> · .</w> · z</w> · 20 · 24</w> · r</w> · .</w> · poz</w> · .</w> · 13 · 20</w>
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,polish_roberta,Polish RoBERTa,12,Dz · . · ␣U · . · ␣z · ␣2024 · ␣r · . · ␣poz · . · ␣13 · 20
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,gpt4o,GPT-4o (o200k),15,Dz · . · ␣U · . · ␣z · ␣ · 202 · 4 · ␣r · . · ␣poz · . · ␣ · 132 · 0
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,bielik_4_5b_v3,Bielik 4.5B v3,19,␣Dz · . · ␣U · . · ␣z · ␣ · 2 · 0 · 2 · 4 · ␣r · . · ␣poz · . · ␣ · 1 · 3 · 2 · 0
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,slayer1b,Slayer1B,12,Dz · . · ␣U · . · ␣z · ␣2024 · ␣r · . · ␣poz · . · ␣13 · 20
+pułapka (nie PII),Dz.U.,Dz. U. z 2024 r. poz. 1320,aster,Aster-0.5B (OrisTeam),12,Dz · . · ␣U · . · ␣z · ␣2024 · ␣r · . · ␣poz · . · ␣13 · 20
+pułapka (nie PII),kwota,"1 234 567,89 zł",nergal,NERGAL (XLM-R),7,"␣1 · ␣234 · ␣ · 567 · , · 89 · ␣zł"
+pułapka (nie PII),kwota,"1 234 567,89 zł",xlm_roberta,XLM-RoBERTa,7,"␣1 · ␣234 · ␣ · 567 · , · 89 · ␣zł"
+pułapka (nie PII),kwota,"1 234 567,89 zł",herbert,HerBERT,7,"1</w> · 234</w> · 5 · 67</w> · ,</w> · 89</w> · zł</w>"
+pułapka (nie PII),kwota,"1 234 567,89 zł",polish_roberta,Polish RoBERTa,6,"1 · ␣234 · ␣567 · , · 89 · ␣zł"
+pułapka (nie PII),kwota,"1 234 567,89 zł",gpt4o,GPT-4o (o200k),8,"1 · ␣ · 234 · ␣ · 567 · , · 89 · ␣zł"
+pułapka (nie PII),kwota,"1 234 567,89 zł",bielik_4_5b_v3,Bielik 4.5B v3,14,"␣ · 1 · ␣ · 2 · 3 · 4 · ␣ · 5 · 6 · 7 · , · 8 · 9 · ␣zł"
+pułapka (nie PII),kwota,"1 234 567,89 zł",slayer1b,Slayer1B,8,"1 · ␣23 · 4 · ␣5 · 67 · , · 89 · ␣zł"
+pułapka (nie PII),kwota,"1 234 567,89 zł",aster,Aster-0.5B (OrisTeam),8,"1 · ␣23 · 4 · ␣5 · 67 · , · 89 · ␣zł"
+pułapka (nie PII),data,2026-11-01,nergal,NERGAL (XLM-R),4,␣20 · 26 · -11- · 01
+pułapka (nie PII),data,2026-11-01,xlm_roberta,XLM-RoBERTa,4,␣20 · 26 · -11- · 01
+pułapka (nie PII),data,2026-11-01,herbert,HerBERT,6,20 · 26</w> · -</w> · 11</w> · -</w> · 01</w>
+pułapka (nie PII),data,2026-11-01,polish_roberta,Polish RoBERTa,4,20 · 26 · -11 · -01
+pułapka (nie PII),data,2026-11-01,gpt4o,GPT-4o (o200k),6,202 · 6 · - · 11 · - · 01
+pułapka (nie PII),data,2026-11-01,bielik_4_5b_v3,Bielik 4.5B v3,11,␣ · 2 · 0 · 2 · 6 · - · 1 · 1 · - · 0 · 1
+pułapka (nie PII),data,2026-11-01,slayer1b,Slayer1B,6,20 · 26 · - · 11 · - · 01
+pułapka (nie PII),data,2026-11-01,aster,Aster-0.5B (OrisTeam),6,20 · 26 · - · 11 · - · 01
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,nergal,NERGAL (XLM-R),6,␣um · owa · ␣nr · ␣123 · 456 · 789
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,xlm_roberta,XLM-RoBERTa,6,␣um · owa · ␣nr · ␣123 · 456 · 789
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,herbert,HerBERT,7,umowa</w> · nr</w> · 12 · 34 · 56 · 7 · 89</w>
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,polish_roberta,Polish RoBERTa,6,umowa · ␣nr · ␣12 · 345 · 67 · 89
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,gpt4o,GPT-4o (o200k),7,um · owa · ␣nr · ␣ · 123 · 456 · 789
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,bielik_4_5b_v3,Bielik 4.5B v3,12,␣umowa · ␣nr · ␣ · 1 · 2 · 3 · 4 · 5 · 6 · 7 · 8 · 9
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,slayer1b,Slayer1B,7,um · owa · ␣nr · ␣123 · 45 · 67 · 89
+pułapka (nie PII),nr po „nr”,umowa nr 123456789,aster,Aster-0.5B (OrisTeam),8,um · owa · ␣nr · ␣123 · 45 · 6 · 78 · 9
+pułapka (nie PII),przepis,art. 275 pkt 1,nergal,NERGAL (XLM-R),5,␣art · . · ␣275 · ␣pkt · ␣1
+pułapka (nie PII),przepis,art. 275 pkt 1,xlm_roberta,XLM-RoBERTa,5,␣art · . · ␣275 · ␣pkt · ␣1
+pułapka (nie PII),przepis,art. 275 pkt 1,herbert,HerBERT,5,art</w> · .</w> · 275</w> · pkt</w> · 1</w>
+pułapka (nie PII),przepis,art. 275 pkt 1,polish_roberta,Polish RoBERTa,5,art · . · ␣275 · ␣pkt · ␣1
+pułapka (nie PII),przepis,art. 275 pkt 1,gpt4o,GPT-4o (o200k),7,art · . · ␣ · 275 · ␣pkt · ␣ · 1
+pułapka (nie PII),przepis,art. 275 pkt 1,bielik_4_5b_v3,Bielik 4.5B v3,9,␣art · . · ␣ · 2 · 7 · 5 · ␣pkt · ␣ · 1
+pułapka (nie PII),przepis,art. 275 pkt 1,slayer1b,Slayer1B,6,art · . · ␣27 · 5 · ␣pkt · ␣1
+pułapka (nie PII),przepis,art. 275 pkt 1,aster,Aster-0.5B (OrisTeam),6,art · . · ␣27 · 5 · ␣pkt · ␣1

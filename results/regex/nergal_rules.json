@@ -1,0 +1,572 @@
+[
+ {
+  "line": 71,
+  "name": "_EMAIL_RE",
+  "pattern": null,
+  "dynamic_source": "_EMAIL_START + r\"[ \\t]{0,3}(?:\" + _EMAIL_DOMAIN + r\"\\.)+[^\\W\\d_]{2,}\\b\"",
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 72,
+  "name": "_EMAIL_WRAP_RE",
+  "pattern": null,
+  "dynamic_source": "_EMAIL_START + r\"[ \\t]{0,3}(?:\" + _EMAIL_DOMAIN\n    + r\"\\.)+[ \\t]*\\r?\\n[ \\t]*(?:\" + _EMAIL_DOMAIN + r\"\\.)*[^\\W\\d_]{2,}\\b\"",
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 75,
+  "name": "_EMAIL_FRAGMENT_RE",
+  "pattern": null,
+  "dynamic_source": "_EMAIL_START + r\"(?=[ \\t]*\\r?$)\"",
+  "flags": "re.M",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 76,
+  "name": "_EMAIL_LABEL_RE",
+  "pattern": "\\be[ -]?mail[ \\t]*:[ \\t]*\\Z",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 77,
+  "name": "_GLUED_WWW_RE",
+  "pattern": "(?<=[^\\W\\d_]{2})www\\.",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 80,
+  "name": "_EDELIVERY_RE",
+  "pattern": null,
+  "dynamic_source": "r\"\\bAE:PL\" + _EDELIVERY_WRAP + r\"\\d{5}\" + _EDELIVERY_WRAP + r\"\\d{5}\"\n                           + _EDELIVERY_WRAP + r\"[A-Z0-9]{5}\" + _EDELIVERY_WRAP + r\"\\d{2}(?![\\w-])\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 82,
+  "name": "_EPUAP_RE",
+  "pattern": "(?<![\\w/])/[\\w-]+/[\\w-]+(?![\\w/-])",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 83,
+  "name": "_EPUAP_LABEL_RE",
+  "pattern": "\\b(?:e[ -]?puap|elektroniczna[ \\t]+skrzynka[ \\t]+podawcza)\\b[^\\n/\\[\\]]{0,50}\\Z",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 85,
+  "name": "_PIN_RE",
+  "pattern": "(?P<label>\\bPIN[ \\t]*[:=][ \\t]*)(?P<number>[\\u202a-\\u202e\\u2066-\\u2069]*\\d(?:[ \\t]?\\d){3,15}#?)(?!\\w|[ \\t]*\\d)",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 106,
+  "name": "_IBAN_RE",
+  "pattern": null,
+  "dynamic_source": "r\"\\b(?:\" + \"|\".join(\n        country + r\"[ \\t-]*[0-9]{2}(?:[ \\t-]*[A-Z0-9]){\" + str(length - 4) + \"}\"\n        for country, length in _IBAN_LENGTHS.items()\n    ) + r\")\\b\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 113,
+  "name": "_ACCOUNT_RE",
+  "pattern": "\\b(?:PL[ \\t-]*)?(?:\\d[ \\t-]*){25}\\d\\b",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "IBAN: PL61 1090 1014 0000 0712 1981 2874",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 114,
+  "name": "_REGON14_RE",
+  "pattern": "\\b\\d{14}\\b",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 115,
+  "name": "_PESEL_RE",
+  "pattern": "\\b\\d{11}\\b",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "PESEL: 44051401359 | telefon (ciągły, +48): 48601234567",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 116,
+  "name": "_NIP_DASH_RE",
+  "pattern": "\\b(?:PL[ \\t]*)?\\d{3}(?:[- \\t]\\d{3}[- \\t]\\d{2}[- \\t]\\d{2}|[- \\t]\\d{2}[- \\t]\\d{2}[- \\t]\\d{3})\\b",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "NIP: 123-456-32-18",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 117,
+  "name": "_NIP_RE",
+  "pattern": "\\b(?:PL[ \\t]*)?\\d{10}\\b",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "KRS: 0000123456",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 118,
+  "name": "_DOCUMENT_RE",
+  "pattern": "\\b(?P<label>(?:dow[oó]d(?:u|em)?[ \\t]+osobist(?:y|ego|ym)|(?:nr|numer)[ \\t]+dowodu|paszport(?:u|em)?(?:[ \\t]+dyplomatyczn(?:y|ego|ym))?)[ \\t]*(?:(?:seria[ \\t]+i[ \\t]+numer|serii|seria|numer|nr)\\.?[ \\t]*)?[:=-]?[ \\t]*)(?P<number>[A-Z]{3}(?:(?P<gap>[ \\t]*,?[ \\t]*(?:numer|nr)\\.?[ \\t]*)|[ \\t-]?)[0-9OIl]{6}|[A-Z]{2}[ \\t-]?[0-9OIl]{7}|[A-Z][ \\t-]?[0-9]{6,9}|[0-9]{4,12})\\b",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 131,
+  "name": "_LABELLED_ID_RE",
+  "pattern": null,
+  "dynamic_source": "r\"(?P<label>\" + _LABELLED_ID_LABEL + r\")\"\n    r\"(?P<number>(?:PL[ \\t]*)?(?:[0-9OIl]{9,14}|\\d(?:[ \\t-]?\\d){8,13}))\"\n    r\"(?!\\w|[ \\t-]*\\d)\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 137,
+  "name": "_LAND_REGISTER_RE",
+  "pattern": "\\b(?P<court>[A-Z]{2}\\d[A-Z])[ \\t]*[/ \\t][ \\t]*(?P<number>\\d{1,8})[ \\t]*/[ \\t]*(?P<check>\\d)(?![\\w/])",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 139,
+  "name": "_LAND_REGISTER_LABEL_RE",
+  "pattern": "(?:(?-i:\\bKW\\b)|\\bks(?:\\.|i[eęą]\\w*)[ \\t]+wieczyst\\w*)[^\\n]{0,30}\\Z",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 157,
+  "name": "_LAND_REGISTER_WORDS_RE",
+  "pattern": null,
+  "dynamic_source": "rf\"\\b(?P<court>[A-Z]{{2}}\\s*(?:\\d|{_DIGIT_WORD})\\s*[A-Z]){_SLASH_WORDS}\"\n    rf\"(?P<number>\\d{{1,8}}|(?:(?:{_NUMBER_WORD})\\s+)*(?:{_NUMBER_WORD})){_SLASH_WORDS}(?P<check>\\d|{_DIGIT_WORD})\\b\"",
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 160,
+  "name": "_REGON9_RE",
+  "pattern": "\\b\\d{9}\\b",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "nr po „nr”: 123456789",
+  "compile_error": ""
+ },
+ {
+  "line": 167,
+  "name": "_NIP_LABEL_RE",
+  "pattern": null,
+  "dynamic_source": "r\"\\bNIP\\b\" + _ID_LABEL_NOTE + _ID_LABEL_SKIP + _ID_LABEL_END",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 168,
+  "name": "_REGON_LABEL_RE",
+  "pattern": null,
+  "dynamic_source": "r\"\\bREGON\\b\" + _ID_LABEL_NOTE + _ID_LABEL_SKIP + _ID_LABEL_END",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 172,
+  "name": "_SPLIT_RE",
+  "pattern": null,
+  "dynamic_source": "r\"(?<![\\w\\]])(?:\\+[ \\t]?)?\\d+(?:[ \\t-]?(?:\\d+|\" + _BOUNDARY + r\"))++(?!\\w|[.,:/]\\d)\"",
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 173,
+  "name": "_SPLIT_FRAGMENT_RE",
+  "pattern": "(?:\\+[ \\t]?)?\\d+(?:[ \\t-]\\d+)*",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "PESEL: 44051401359 | telefon (spacje): 601 234 567 | telefon (ciągły, +48): +48601234567 | telefon (kreski): 601-234-567 | IBAN: 61 1090 1014 0000 0712 1981 2874 | NIP: 123-456-32-18 | KRS: 0000123456 | dowód osobisty: 123456",
+  "hits_decoys": "kod CPV: 45233140-2 | nr ogłoszenia BZP: 2026 | znak sprawy: 271 | sygnatura KIO: 1234 | Dz.U.: 2024 | kwota: 1 234 567 | data: 2026-11-01 | nr po „nr”: 123456789 | przepis: 275",
+  "compile_error": ""
+ },
+ {
+  "line": 174,
+  "name": "_SPLIT_LABEL_RE",
+  "pattern": null,
+  "dynamic_source": "_LABELLED_ID_LABEL + r\"\\Z\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 175,
+  "name": "_SPLIT_NOT_PHONE_RE",
+  "pattern": "\\d{2}-\\d{3}|\\d{4}-\\d{2}-\\d{2}|\\d{2}-\\d{2}-\\d{4}",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "telefon (kreski): 01-234 | NIP: 23-456",
+  "hits_decoys": "data: 2026-11-01",
+  "compile_error": ""
+ },
+ {
+  "line": 177,
+  "name": "_KRS_RE",
+  "pattern": "\\b\\d{6,10}(?!\\w|[ \\t-]*\\d)",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "KRS: 0000123456",
+  "hits_decoys": "nr ogłoszenia BZP: 00123456 | nr po „nr”: 123456789",
+  "compile_error": ""
+ },
+ {
+  "line": 179,
+  "name": "_KRS_LABEL_RE",
+  "pattern": null,
+  "dynamic_source": "r\"(?:\\bKRS\\b|\\bKrajow\\w*[ \\t]+Rejestr\\w*[ \\t]+S[aą]dow\\w*)\"\n    r\"(?:[ \\t]{0,8},?[ \\t]{0,8}pod[ \\t]{1,8}(?:nr\\.?|numerem))?\" + _ID_LABEL_END",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 196,
+  "name": "_VANITY_PHONE_RE",
+  "pattern": "(?<!\\w)\\+1[ \\t-]+\\d{3}[ \\t-]+(?:\\d{3}-[A-Z]{4}|[A-Z]{7})(?:[ \\t]+\\(\\d{4,7}\\))?(?!\\w)",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 204,
+  "name": "_PHONE_RE",
+  "pattern": null,
+  "dynamic_source": "_VANITY_PHONE_RE.pattern + r\"|(?:(?<!\\w)|(?<=telefon)|(?<=tel)|(?<=faks)|(?<=fax))(?:\\(?\\+[ \\t]*)?\"\n    r\"(?:\\((?:0|[1-9]\\d{0,2}-\\d{1,4}|0?\\d{2,4}(?:-\\d{1,2})?)\\)\" + _SEP + r\")?\"\n    r\"\\d(?:\" + _SEP + r\"\\d){4,}\" + _PHONE_END",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 209,
+  "name": "_SHORT_PHONE_LABEL_RE",
+  "pattern": null,
+  "dynamic_source": "r\"(?:\\b(?:tel(?:efon\\w*)?(?:(?:\\.[ \\t]*|[ \\t]+)(?:kom[oó]rk\\w*|lokaln\\w*|stacjonarn\\w*))?|fax|faks(?:em)?|phone|\"\n    r\"toll[ -]free|numer[ \\t]+bezpłatny)|[☎☏📞📱])[.: \\t/]{0,8}\\Z|\"\n    r\"\\binfolini[^\\W\\d_]*[^\\d\\n]{0,80}:[ \\t]*\\Z|\" + _GLUED_PHONE_LABEL + r\"[ \\t]*\\Z\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 213,
+  "name": "_PHONE_LABEL_RE",
+  "pattern": "\\b(?:tel(?:efon[^\\W\\d_]*)?|fax|faks(?:em)?|kom(?:[oó]rk[^\\W\\d_]*)?|gsm|infolini[^\\W\\d_]*|(?:za)?dzwo[ńn][^\\W\\d_]*|Blikiem|lini[ęaąie][ \\t]+wsparcia)(?![^\\W\\d_])|\\bkontakt(?=tel[.:])|[☎☏📞📱]",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "telefon (kreski): tel",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 219,
+  "name": "_PHONE_BREAK_RE",
+  "pattern": "\\n|\\.[ \\t]+(?=\\d)|[ \\t]+(?=\\(?(?:[01]?\\d|2[0-3])[.:][0-5]\\d|\\d{1,2}[.)][ \\t]+\\d{1,2}[./]\\d{1,2}[./](?:19|20)\\d{2})",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "telefon (kreski): . ",
+  "hits_decoys": "Dz.U.: .  | przepis: . ",
+  "compile_error": ""
+ },
+ {
+  "line": 222,
+  "name": "_SECTION_MARKER_RE",
+  "pattern": "\\d{1,2}[.)](?!\\d)",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 223,
+  "name": "_PHONE_EXTENSION_RE",
+  "pattern": "(?:(?:[ \\t]+,?[ \\t]*|,[ \\t]*)wew(?:n(?:ętrzny)?)?\\.?[ \\t]*\\d{1,5}|[ \\t]+do[ \\t]+\\d{1,3}(?=[ \\t]*(?:[.;,](?!\\d)|\\r?\\n|\\Z)))(?!\\w|[ \\t]*\\d)",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 225,
+  "name": "_OTHER_NUMBER_LABEL_RE",
+  "pattern": null,
+  "dynamic_source": "r\"\\b(?:NIP|REGON|PESEL|KRS|ISBN|kod)\\b(?:(?!\" + re.escape(PERSON_TAG) + r\")[^\\d\\n]){0,20}\\Z\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 232,
+  "name": "_GROUPED_PHONE_RE",
+  "pattern": null,
+  "dynamic_source": "r\"(?:\\+48[ \\t]?)?(?:(?:\" + _MOBILE_PREFIX + r\")\\d(?P<m>[ -])\\d{3}(?P=m)\\d{3}\"\n    r\"|(?:\\((?:\" + _AREA_CODE + r\")\\)|(?:\" + _AREA_CODE + r\"))(?P<l>[ -])\\d{3}(?P=l)\\d{2}(?P=l)\\d{2})\"",
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 235,
+  "name": "_PHONE_LIST_HEADING_RE",
+  "pattern": "[ \\t]*(?:numery[ \\t]+kontaktowe|telefony(?:[ \\t]+(?:kontaktowe|zaufania))?|fax|faks|zapisz[ \\t]+się|(?:[^.!?\\n]{0,40}\\?[ \\t]*)?(?:za)?dzwoń!?)(?:[ \\t]*\\([^()\\n]{1,80}\\))?[ \\t]*:?[ \\t]*",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 239,
+  "name": "_CONTACT_INTRO_RE",
+  "pattern": "\\b(?:kontakt\\b|zapisy\\b|zapisz[ \\t]+się\\b|rejestracja\\b)(?:nr\\.|[^\\n.!?;]){0,75}\\Z",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 242,
+  "name": "_PHONE_HEADING_RE",
+  "pattern": "(?<!\\[)\\b(?:tel(?:efon[^\\W\\d_]*)?\\b|kontakt\\b|zapisy\\b|zapisz[ \\t]+się\\b|(?:za)?dzwo[ńn][^\\W\\d_]*\\b|(?:pod|na)[ \\t]+numer(?:em)?)(?:tj\\.|nr\\.|[^\\d\\n.!?;\\[\\]]){0,75}:?[ \\t]*(?:\\n[ \\t]*){1,4}\\Z",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 246,
+  "name": "_CONTACT_EXCLUDE_RE",
+  "pattern": "\\b(?:spraw\\w*|kod\\w*|kwot\\w*|statystyk\\w*|taryf\\w*)\\b",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 247,
+  "name": "_PHONE_LINE_RE",
+  "pattern": "(?<!\\w)\\d{2,3}(?:[ \\t-]\\d{2,4}){2,3}(?!\\w)",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "telefon (spacje): 601 234 567 | telefon (kreski): 601-234-567 | NIP: 123-456-32-18",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 248,
+  "name": "_PHONE_TITLE_RE",
+  "pattern": "\\b(?:film\\w*|serial\\w*|tytuł\\w*|zatytułowan\\w*)\\b",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 249,
+  "name": "_STAFF_ROLE_RE",
+  "pattern": "\\b(?:inspektor|referent|koordynator|psycholog|księgowość|księgowy|księgowa|pracownicy[ \\t]+socjalni|łowczy|podłowczy)\\b",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 379,
+  "name": "_MONEY_AFTER_RE",
+  "pattern": null,
+  "dynamic_source": "r\"(?:[,.][0-9]+)?\" + _MONEY_GAP\n    + r\"(?:(?:tys\\.?|mln|mld|bln)\\b\\.?\" + _MONEY_GAP + r\")?\"\n    + r\"(?:\" + _CURRENCY + r\")\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 384,
+  "name": "_MONEY_BEFORE_RE",
+  "pattern": null,
+  "dynamic_source": "r\"(?:\\b(?:PLN|EUR|USD|GBP|CHF)|[€$£])\" + _MONEY_GAP + r\"$\"",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 737,
+  "name": "_PHONE_CONNECTOR_RE",
+  "pattern": "\\s*(?:[,;/&\\n]|\\b(?:lub|albo|i|oraz|and)\\b)\\s*",
+  "dynamic_source": null,
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "nr ogłoszenia BZP: / | sygnatura KIO: / | kwota: ,",
+  "compile_error": ""
+ },
+ {
+  "line": 738,
+  "name": "_KEYPAD_RE",
+  "pattern": "(?<=[\\d-])[A-Z]+",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 739,
+  "name": "_PHONE_CODE_RE",
+  "pattern": "\\(?\\+?\\d{2,4}\\)?",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "PESEL: 4405 | telefon (spacje): 601 | telefon (ciągły, +48): +4860 | telefon (kreski): 601 | IBAN: 61 | NIP: 123 | KRS: 0000 | dowód osobisty: 1234",
+  "hits_decoys": "kod CPV: 4523 | nr ogłoszenia BZP: 2026 | znak sprawy: 271 | sygnatura KIO: 1234 | Dz.U.: 2024 | kwota: 234 | data: 2026 | nr po „nr”: 1234 | przepis: 275",
+  "compile_error": ""
+ },
+ {
+  "line": 740,
+  "name": "_PHONE_DASH_RE",
+  "pattern": "\\s+[-–—]\\s+",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 186,
+  "name": "",
+  "pattern": "\\b(?:\\d{9}|\\d{2}-\\d{3}-\\d{4})(?!\\w|[ \\t-]*\\d)",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "nr po „nr”: 123456789",
+  "compile_error": ""
+ },
+ {
+  "line": 187,
+  "name": "",
+  "pattern": null,
+  "dynamic_source": "r\"\\bD-?U-?N-?S\\b(?:[ \\t]?®)?(?:[ \\t]{1,8}number)?\" + _REGISTRY_BY + _ID_LABEL_END",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 188,
+  "name": "",
+  "pattern": "\\b\\d{9}(?!\\w|[ \\t-]*\\d)",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "nr po „nr”: 123456789",
+  "compile_error": ""
+ },
+ {
+  "line": 189,
+  "name": "",
+  "pattern": null,
+  "dynamic_source": "r\"\\bBDO\\b\" + _REGISTRY_BY + _ID_LABEL_END",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 190,
+  "name": "",
+  "pattern": "\\b\\d{12}(?!\\w|[ \\t-]*\\d)",
+  "dynamic_source": null,
+  "flags": "",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ },
+ {
+  "line": 191,
+  "name": "",
+  "pattern": null,
+  "dynamic_source": "r\"(?:\\bRPWDL\\b|\\bksi[eę]g\\w*[ \\t]+rejestrow\\w*)\" + _REGISTRY_BY + _ID_LABEL_END",
+  "flags": "re.I",
+  "hits_pii": "",
+  "hits_decoys": "",
+  "compile_error": ""
+ }
+]

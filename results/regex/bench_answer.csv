@@ -1,0 +1,41 @@
+tokenizer,label,context,continuation,whole_tokens,continuation_alone,continuation_n,context_is_prefix,continuation_in_context,same_as_alone
+aster,Aster-0.5B (OrisTeam),Answer:,␣A,A · ns · wer · : · ␣A,␣A,1,True,␣A,True
+aster,Aster-0.5B (OrisTeam),Answer:,A,A · ns · wer · : · A,A,1,True,A,True
+aster,Aster-0.5B (OrisTeam),Odpowiedź:,␣A,Odpowie · dź · : · ␣A,␣A,1,True,␣A,True
+aster,Aster-0.5B (OrisTeam),Question?⏎,A,Q · ue · stion · ? · ⏎ · A,A,1,True,A,True
+aster,Aster-0.5B (OrisTeam),(,A),( · A · ),A · ),2,True,A · ),True
+bielik_1_5b_v3,Bielik 1.5B v3,Answer:,␣A,␣A · ns · wer · : · ␣A,␣A,1,True,␣A,True
+bielik_1_5b_v3,Bielik 1.5B v3,Answer:,A,␣A · ns · wer · : · A,␣A,1,True,A,False
+bielik_1_5b_v3,Bielik 1.5B v3,Odpowiedź:,␣A,␣Odpowiedź · : · ␣A,␣A,1,True,␣A,True
+bielik_1_5b_v3,Bielik 1.5B v3,Question?⏎,A,␣Que · sti · on · ? · <0x0A> · A,␣A,1,True,A,False
+bielik_1_5b_v3,Bielik 1.5B v3,(,A),␣( · A · ),␣A · ),2,True,A · ),False
+eurollm,EuroLLM,Answer:,␣A,␣Ans · wer · : · ␣A,␣A,1,True,␣A,True
+eurollm,EuroLLM,Answer:,A,␣Ans · wer · : · A,␣A,1,True,A,False
+eurollm,EuroLLM,Odpowiedź:,␣A,␣Odpowied · ź · : · ␣A,␣A,1,True,␣A,True
+eurollm,EuroLLM,Question?⏎,A,␣Question · ? · <0x0A> · A,␣A,1,True,A,False
+eurollm,EuroLLM,(,A),␣( · A · ),␣A · ),2,True,A · ),False
+lfm2_5,LFM2.5,Answer:,␣A,Answer · : · ␣A,␣A,1,True,␣A,True
+lfm2_5,LFM2.5,Answer:,A,Answer · :A,A,1,False,—,False
+lfm2_5,LFM2.5,Odpowiedź:,␣A,Od · pow · ied · ź · : · ␣A,␣A,1,True,␣A,True
+lfm2_5,LFM2.5,Question?⏎,A,Question · ?⏎ · A,A,1,True,A,True
+lfm2_5,LFM2.5,(,A),(A · ),A · ),2,False,—,False
+lfm3,LFM3,Answer:,␣A,Answer · : · ␣A,␣A,1,True,␣A,True
+lfm3,LFM3,Answer:,A,Answer · :A,A,1,False,—,False
+lfm3,LFM3,Odpowiedź:,␣A,Od · pow · ied · ź · : · ␣A,␣A,1,True,␣A,True
+lfm3,LFM3,Question?⏎,A,Question · ?⏎ · A,A,1,True,A,True
+lfm3,LFM3,(,A),(A · ),A · ),2,False,—,False
+pythia,Pythia (GPT-NeoX),Answer:,␣A,Answer · : · ␣A,␣A,1,True,␣A,True
+pythia,Pythia (GPT-NeoX),Answer:,A,Answer · : · A,A,1,True,A,True
+pythia,Pythia (GPT-NeoX),Odpowiedź:,␣A,O · dp · ow · ied · � · � · : · ␣A,␣A,1,True,␣A,True
+pythia,Pythia (GPT-NeoX),Question?⏎,A,Question · ? · ⏎ · A,A,1,True,A,True
+pythia,Pythia (GPT-NeoX),(,A),( · A · ),A · ),2,True,A · ),True
+qwen3_5,Qwen3.5,Answer:,␣A,Answer · : · ␣A,␣A,1,True,␣A,True
+qwen3_5,Qwen3.5,Answer:,A,Answer · :A,A,1,False,—,False
+qwen3_5,Qwen3.5,Odpowiedź:,␣A,O · dp · owied · ź · : · ␣A,␣A,1,True,␣A,True
+qwen3_5,Qwen3.5,Question?⏎,A,Question · ? · ⏎ · A,A,1,True,A,True
+qwen3_5,Qwen3.5,(,A),(A · ),A · ),2,False,—,False
+slayer1b,Slayer1B,Answer:,␣A,Answer · : · ␣A,␣A,1,True,␣A,True
+slayer1b,Slayer1B,Answer:,A,Answer · : · A,A,1,True,A,True
+slayer1b,Slayer1B,Odpowiedź:,␣A,Odpowie · dź · : · ␣A,␣A,1,True,␣A,True
+slayer1b,Slayer1B,Question?⏎,A,Question · ? · ⏎ · A,A,1,True,A,True
+slayer1b,Slayer1B,(,A),( · A · ),A · ),2,True,A · ),True

@@ -6,7 +6,7 @@ grupy tokenizerów. Zmierzono 70 modeli (63 lokalnie, 7 przez API); po
 odrzuceniu powtórzeń tego samego tokenizera zostaje **52 unikalnych tokenizerów LLM**. Do tego
 4 tokenizery enkoderów (NERGAL i porównanie).
 
-Autor: ArtSmol. Data: 2026-11-01. Dane: [Hugging Face](https://huggingface.co/datasets/adegier/tokenizer-fertility-pl). Kod: [GitHub](https://github.com/adgr3/tokenizer-tax-pl).
+Autor: adgr3. Data: 2026-11-01. Dane: [Hugging Face](https://huggingface.co/datasets/adegier/tokenizer-fertility-pl). Kod: [GitHub](https://github.com/adgr3/tokenizer-tax-pl).
 
 ## Najważniejsze wnioski
 

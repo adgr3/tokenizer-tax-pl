@@ -391,7 +391,7 @@ Dane: https://huggingface.co/datasets/{args.hf} (plik data/nergal_encoders.csv).
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--author", default="ArtSmol")
+    ap.add_argument("--author", default="adgr3")
     ap.add_argument("--hf", default="adegier/tokenizer-fertility-pl")
     ap.add_argument("--gh", default="adgr3/tokenizer-tax-pl")
     build(ap.parse_args(argv))

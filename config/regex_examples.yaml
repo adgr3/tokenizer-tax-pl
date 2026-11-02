@@ -1,0 +1,78 @@
+# Przykłady i sondy do analizy pre-tokenizacji (praca domowa 2: „co robią regexy i po co”).
+
+# Teksty demonstracyjne (kolorowy podział w charts/regex_demo.html i w REGEX.md)
+demo:
+  - "W 2026 r. Gmina Łomianki ogłosiła przetarg nr ZP.271.12.2026 na kwotę 1 234 567,89 zł."
+  - "PESEL 44051401359, tel. +48 601 234 567, e-mail: jan.kowalski@gmina.pl"
+  - "He's here. They'LL go! XMLHttpRequest, McDonald, PESELu, ZUS-u"
+  - "Odpowiedź: A\nAnswer:A (B) „cytat” — ok…"
+  - "def f(x):\n        return x  # ok"
+
+# Tokenizery pokazywane w demo (id z config/tokenizers.yaml; brakujące są pomijane)
+demo_tokenizers: [gpt2, gpt4_cl100k, gpt4o, llama33, qwen3, deepseek_v3, gemma3, mistral_nemo, bielik_11b_v3,
+                  bielik_4_5b_v3, pllum_12b, slayer1b, aster, gollem, nergal, herbert]
+
+# Tokenizery spoza pracy 1 — dodane tylko do pracy 2 (tokenizers.yaml zostaje bez zmian).
+# Aster-0.5B (OrisTeam, Aleksander Ogrodzki): polski model 0,5B, tokenizer aster-v1-05 (słownik 32 000), tylko
+# tokenizer.json. Rewizja przypięta jak w teście v2 (#418).
+extra_tokenizers:
+  - id: aster
+    label: "Aster-0.5B (OrisTeam)"
+    kind: tokenizer_json
+    repo: OrisTeam/Aster-0.5B
+    revision: 97691358f355c9d3f57e5b1a8b31eb79d5c53f2f
+    group: pl
+    origin: Polska
+    polish_model: true
+    bench_ref: true
+    fertility_pl_v1: 1.550   # SIB-200 PL metodą pracy 1 (bloki); zgodne z wynikiem autora — do wykresu 11
+
+# Sondy cech (automatyczna tabela „porównanie rodzin”)
+probes:
+  liczba_8_cyfr: "12345678"
+  data: "2026-11-01"
+  kwota: "1 234 567,89 zł"
+  skrot_en: "They'LL"
+  camelcase: "XMLHttpRequest"
+  spacja_litera: "Answer: A"
+  bez_spacji_litera: "Answer:A"
+  nawias_polski: "(Łódź"
+  nawias_ascii: "(Lodz"
+  email: "jan.kowalski@gmina.pl"
+  skrotowiec_odmiana: "ZUS-u"
+  wciecie_kodu: "x\n        return x"
+
+# Bench Team: litera odpowiedzi (zadanie A6) i liczby (testy matematyczne)
+bench_answer:
+  - {context: "Answer:", continuation: " A"}
+  - {context: "Answer:", continuation: "A"}
+  - {context: "Odpowiedź:", continuation: " A"}
+  - {context: "Question?\n", continuation: "A"}
+  - {context: "(", continuation: "A)"}
+bench_numbers: ["7", "42", "2026", "12345678", "3.14159", "1 000 000", "1,000,000", "2026-11-01", "-17", "0.5"]
+
+# NERGAL: dane osobowe (pozytywne) i identyfikatory przetargowe, które NIE są danymi osobowymi (pułapki)
+nergal_pii:
+  - {category: PESEL, text: "44051401359"}
+  - {category: "telefon (spacje)", text: "601 234 567"}
+  - {category: "telefon (ciągły, +48)", text: "+48601234567"}
+  - {category: "telefon (kreski)", text: "tel. 601-234-567"}
+  - {category: e-mail, text: "jan.kowalski@gmina.pl"}
+  - {category: IBAN, text: "PL61 1090 1014 0000 0712 1981 2874"}
+  - {category: NIP, text: "123-456-32-18"}
+  - {category: KRS, text: "KRS 0000123456"}
+  - {category: "dowód osobisty", text: "ABC123456"}
+nergal_decoys:
+  - {category: "kod CPV", text: "45233140-2"}
+  - {category: "nr ogłoszenia BZP", text: "2026/BZP 00123456/01"}
+  - {category: "znak sprawy", text: "ZP.271.12.2026"}
+  - {category: "sygnatura KIO", text: "KIO 1234/26"}
+  - {category: "Dz.U.", text: "Dz. U. z 2024 r. poz. 1320"}
+  - {category: kwota, text: "1 234 567,89 zł"}
+  - {category: data, text: "2026-11-01"}
+  - {category: "nr po „nr”", text: "umowa nr 123456789"}
+  - {category: "przepis", text: "art. 275 pkt 1"}
+
+# Regex z grafiki (GPT-4o / o200k_base) — selftest sprawdza, czy to dokładnie ten z tiktoken
+graphic_o200k: |-
+  [^\r\n\p{L}\p{N}]?[\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{M}]*[\p{Ll}\p{Lm}\p{Lo}\p{M}]+(?i:'s|'t|'re|'ve|'m|'ll|'d)?|[^\r\n\p{L}\p{N}]?[\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{M}]+[\p{Ll}\p{Lm}\p{Lo}\p{M}]*(?i:'s|'t|'re|'ve|'m|'ll|'d)?|\p{N}{1,3}| ?[^\s\p{L}\p{N}]+[\r\n/]*|\s*[\r\n]+|\s+(?!\S)|\s+

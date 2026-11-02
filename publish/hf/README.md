@@ -42,4 +42,12 @@ Zbiór zawiera wyłącznie pomiary; nie zawiera tekstów SIB-200 ani polish-dyna
 ## Cytowanie
 
 Ovcharov V., „The Tokenizer Tax Across 25 European Languages”, arXiv:2605.24718 (2026). Pierwsza polska wersja wykresu:
-Dariusz Ciba. Ten zbiór: ArtSmol, 2026-11-01.
+Dariusz Ciba. Ten zbiór: adgr3, 2026-11-01.
+
+## Pre-tokenizacja (praca 2)
+
+- `data/regex_catalog.csv` — jaki pre-tokenizer (regex / SentencePiece) ma każdy tokenizer i jak tnie sondy
+  (liczby, skróty, camelCase, „Answer:A”, „(Łódź”, „ZUS-u”).
+- `data/regex_stats_long.csv` — SIB-200: kawałki na słowo, odsetek słów = 1 token, 25 języków.
+- `data/regex_bench_*.csv` — litera odpowiedzi i liczby (Bench Team), `data/regex_nergal_*.csv` — dane osobowe w
+  tokenach i reguły `scrub_pii.py` NERGAL-a na identyfikatorach przetargowych.

@@ -103,3 +103,45 @@ Dopisane:
   Wydatek AIHubMix łącznie: 0,40 USD (Grok 4.7: ok. 0,10 USD).
 - Wynik: inny tokenizer niż Grok 4.1 Fast (porównanie surowych liczb tokenów na tych samych blokach) — opis
   w `report/WNIOSKI.md`.
+
+## Praca 2 — regexy tokenizerów (2026-11-02)
+
+- Paczka `praca2-regexy-v2.zip` rozpakowała się do podfolderu `tokenizer-tax-pl/` (ignorowanego przez git). Do repo
+  skopiowano tylko nowe pliki: `tt/pretok.py`, `tt/report_regex.py`, `docs/REGEX_OBJASNIENIA.md`,
+  `config/regex_examples.yaml`, `tests/rx_expected.json`, `ZADANIE_REGEX.md`, `CZYTAJ_MNIE_PRACA2.md`. Stare pliki
+  pracy 1 z paczki (`tokenizers.yaml`, `backends.py` itd.) nie nadpisały wersji z repo.
+- `tt/backends.py` był zmieniany w pracy 1 (Slayer z pliku parquet, rewizja tylko dla repo głównego), więc zamiast
+  podmiany na `praca2/backends.py` dopisano ręcznie `self.raw = None` w `Tok` i `t.raw = (…)` w każdej gałęzi
+  `_load_one` (tiktoken, tokenizer_json, hf, mock). Liczenie tokenów bez zmian (`tests/run_offline_test.py`: TEST OK).
+- `requirements.txt`: dopisany `regex`.
+- Komendy uruchamiane z `PYTHONIOENCODING=utf-8` (konsola Windows cp1250 nie wypisuje znaku „→”; bez wpływu na wyniki).
+- `tt.report` (odświeżenie pracy 1) usuwał ręczne sekcje README („Co z tego wynika”, Grok 4.7, niezmierzone modele),
+  wykres `publish/bench_team/tokenizer-fertility/slayer_vs_odniesienia.png` i zmieniał tylko datę — te pliki
+  przywrócono z ostatniego commitu (`git checkout`); liczby pracy 1 bez zmian.
+- `docs/REGEX_OBJASNIENIA.md` — poprawki według `results/regex/demo.md` i `catalog.csv`:
+  - dopisano, że Llama 3.3 ma regex GPT-4 (liczby po 3 cyfry), a Qwen3 oraz Mistral Nemo / PLLuM 12B (regex „Tekken”)
+    tną liczby regexem po jednej cyfrze (wcześniej brak; wnioski sugerowały, że po jednej cyfrze tnie tylko
+    SentencePiece);
+  - Gemma: formalnie `Split(" ")`, ale normalizator wcześniej zamienia spacje na `▁`, więc podział nic nie robi;
+    XLM-RoBERTa (NERGAL) dzieli po białych znakach (`WhitespaceSplit`);
+  - GPT-2 trzyma liczbę w jednym kawałku, ale BPE i tak ją tnie (`␣4·405·14·01·359`);
+  - `ZUS-u`: `␣ZUS │ -u` (GPT-4 i nowsze) albo `␣ZUS │ - │ u` (GPT-2), nie zawsze `␣ZUS │ -u`.
+- DeepSeek V3: w `catalog.csv` 3 kroki jak na grafice (liczby → znaki chińskie/japońskie → główny regex) — opis bez zmian.
+- `tt/pretok.py` — poprawka `stats`: zastępczy podział po `▁` działał tylko przy całkowitym braku pre-tokenizera.
+  Bielik v3, Llama 2, Qra, Salamandra, EuroLLM (Metaspace `split=False`), Gemma i PLLuM 4B (`Split(" ")` po zamianie
+  spacji na `▁`) oraz dwa tokenizery SlayerLab z ByteLevel bez regexu mają pre-tokenizer, który nie dzieli tekstu —
+  cały blok był jednym „słowem” i wychodziło „słowo = 1 token: 0%”. Nowa metoda `Pipe.stat_pieces` (tylko dla
+  `stats`; `catalog`/`demo` pokazują rzeczywisty podział) wykrywa taki pre-tokenizer i dzieli po `▁` (albo `Ġ`),
+  oznaczając w kolumnie `approx`. Dla SentencePiece suma tokenów kawałków = pełne kodowanie; dla ByteLevel bez
+  regexu nie (BPE skleja tam tokeny przez spacje, np. `:␣A`) — widać to w `mismatch_blocks`.
+- `tt/report_regex.py`: tokenizery bez regexu w osobnej tabeli „Tokenizery bez regexu” i poza średnią; w wykresie 10
+  oznaczone gwiazdką; linijka z kontrolą `mismatch_blocks` (których tokenizerów i języków dotyczy); nowa sekcja
+  „Aster-0.5B obok Slayer1B i Bielików v3” (pre-tokenizer, regex, sondy, PESEL, słowo = 1 token PL/EN).
+- Wykres 11: większy, punkty o tych samych wartościach mają jeden podpis, podpisy rozsuwane (w prawo i w lewo, z linią
+  do punktu) tak, by nie nachodziły na siebie ani na punkty; podpisu, którego nie da się umieścić, nie rysujemy
+  (przypis odsyła do tabeli); tokenizery bez regexu jako puste kółka.
+- `tt/report_regex.py`: teksty z miejsc `<!-- AGENT: … -->` są wstawiane z `report/WNIOSKI_REGEX.md` i
+  `report/NERGAL_REGEXY_KOMENTARZ.md`, więc ponowne generowanie raportu ich nie kasuje.
+- Napisane: `report/WNIOSKI_REGEX.md`, `report/NERGAL_REGEXY_KOMENTARZ.md`, `report/DISCORD_REGEX.md`.
+- Podpis autora: „ArtSmol” zamieniony na „adgr3” (README, karta zbioru `publish/hf/README.md`, domyślne `--author`
+  w `tt/report.py`, polecenia w plikach ZADANIE), żeby wszędzie była jedna nazwa — ta sama co konto GitHub.

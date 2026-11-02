@@ -13,3 +13,4 @@ matplotlib
 pyyaml
 requests
 scipy
+regex

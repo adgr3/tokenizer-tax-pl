@@ -22,6 +22,7 @@ class Tok:
         self.vocab_size = vocab_size
         self.meta = meta
         self.fingerprint = self._fingerprint()
+        self.raw = None   # (rodzaj, obiekt) — używane przez analizę pre-tokenizacji
 
     def count(self, text: str) -> int:
         return self._count(text)
@@ -48,8 +49,10 @@ def _load_one(spec: dict, repo: str) -> Tok:
         import tiktoken
         enc = tiktoken.get_encoding(repo)
         ids = lambda t: enc.encode(t, disallowed_special=())  # noqa: E731
-        return Tok(lambda t: len(ids(t)), enc.n_vocab,
-                   {"source": f"tiktoken:{repo}", "revision": getattr(tiktoken, "__version__", None), "_ids_fn": ids})
+        t = Tok(lambda t: len(ids(t)), enc.n_vocab,
+                {"source": f"tiktoken:{repo}", "revision": getattr(tiktoken, "__version__", None), "_ids_fn": ids})
+        t.raw = ("tiktoken", enc)
+        return t
     if kind == "tokenizer_json":
         from huggingface_hub import hf_hub_download
         from tokenizers import Tokenizer
@@ -63,9 +66,11 @@ def _load_one(spec: dict, repo: str) -> Tok:
         else:
             tok = Tokenizer.from_file(path)
         ids = lambda t: tok.encode(t, add_special_tokens=False).ids  # noqa: E731
-        return Tok(lambda t: len(ids(t)), tok.get_vocab_size(with_added_tokens=True),
-                   {"source": f"hf:{repo}/{spec.get('file', 'tokenizer.json')}" + (f"#{spec['row']}" if spec.get("row") else ""),
-                    "revision": revision or _hf_revision_sha(repo, None), "_ids_fn": ids})
+        t = Tok(lambda t: len(ids(t)), tok.get_vocab_size(with_added_tokens=True),
+                {"source": f"hf:{repo}/{spec.get('file', 'tokenizer.json')}" + (f"#{spec['row']}" if spec.get("row") else ""),
+                 "revision": revision or _hf_revision_sha(repo, None), "_ids_fn": ids})
+        t.raw = ("tokenizers", tok)
+        return t
     if kind == "hf":
         from huggingface_hub import snapshot_download
         from transformers import AutoTokenizer
@@ -79,9 +84,11 @@ def _load_one(spec: dict, repo: str) -> Tok:
         except Exception:  # noqa: BLE001
             pass
         ids = lambda t: tok(t, add_special_tokens=False)["input_ids"]  # noqa: E731
-        return Tok(lambda t: len(ids(t)), len(tok),
-                   {"source": f"hf:{repo}", "revision": revision or _hf_revision_sha(repo, None),
-                    "tokenizer_class": type(tok).__name__, "_ids_fn": ids})
+        t = Tok(lambda t: len(ids(t)), len(tok),
+                {"source": f"hf:{repo}", "revision": revision or _hf_revision_sha(repo, None),
+                 "tokenizer_class": type(tok).__name__, "_ids_fn": ids})
+        t.raw = ("tokenizers", tok.backend_tokenizer) if getattr(tok, "is_fast", False) else ("slow", tok)
+        return t
     if kind == "mock":
         # Atrapa do testów bez sieci: tokeny = ceil(liczba_znaków / chars_per_token) w każdym słowie.
         cpt = float(spec.get("chars_per_token", 4))
@@ -90,7 +97,9 @@ def _load_one(spec: dict, repo: str) -> Tok:
             for w in t.split():
                 out += [zlib.crc32(w[i:i + int(cpt)].encode()) % 50000 for i in range(0, len(w), max(1, int(cpt)))]
             return out
-        return Tok(lambda t: len(ids(t)), 50000 + int(cpt * 1000), {"source": f"mock:{cpt}", "_ids_fn": ids})
+        t = Tok(lambda t: len(ids(t)), 50000 + int(cpt * 1000), {"source": f"mock:{cpt}", "_ids_fn": ids})
+        t.raw = ("mock", cpt)
+        return t
     raise ValueError(f"Nieznany rodzaj tokenizera: {kind}")
 
 
